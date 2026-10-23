@@ -1,0 +1,328 @@
+{
+  "winner": "R001_100",
+  "scores": {
+    "R001_100": {
+      "score": 0.8800411223911028,
+      "mean_return": 0.020566937916040876,
+      "sample_std": 0.08095753827936736,
+      "mean_turnover": 0.3790530676657172,
+      "n_months": 108,
+      "rank_lower": 1,
+      "rank_upper": 100
+    },
+    "R101_200": {
+      "score": 0.6829584737814656,
+      "mean_return": 0.015093610309766723,
+      "sample_std": 0.07655780235483729,
+      "mean_turnover": 0.7353433205447983,
+      "n_months": 108,
+      "rank_lower": 101,
+      "rank_upper": 200
+    },
+    "R201_300": {
+      "score": 0.5704122525430229,
+      "mean_return": 0.012323304721332728,
+      "sample_std": 0.07483917043977527,
+      "mean_turnover": 0.9259731775558774,
+      "n_months": 108,
+      "rank_lower": 201,
+      "rank_upper": 300
+    },
+    "R301_400": {
+      "score": 0.3318435209418988,
+      "mean_return": 0.0072214954249327674,
+      "sample_std": 0.07538491001486047,
+      "mean_turnover": 1.0134200519233074,
+      "n_months": 108,
+      "rank_lower": 301,
+      "rank_upper": 400
+    },
+    "R401_500": {
+      "score": 0.36254486967276606,
+      "mean_return": 0.007751821666214102,
+      "sample_std": 0.0740683435361526,
+      "mean_turnover": 1.0715557755685416,
+      "n_months": 108,
+      "rank_lower": 401,
+      "rank_upper": 500
+    }
+  },
+  "training_hash": "685db4b17ba6c126477f83d5f269ddf159f6bee343335f08ff54913a9e0e2f1b",
+  "train_months": [
+    "2015-01",
+    "2015-02",
+    "2015-03",
+    "2015-04",
+    "2015-05",
+    "2015-06",
+    "2015-07",
+    "2015-08",
+    "2015-09",
+    "2015-10",
+    "2015-11",
+    "2015-12",
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05",
+    "2016-06",
+    "2016-07",
+    "2016-08",
+    "2016-09",
+    "2016-10",
+    "2016-11",
+    "2016-12",
+    "2017-01",
+    "2017-02",
+    "2017-03",
+    "2017-04",
+    "2017-05",
+    "2017-06",
+    "2017-07",
+    "2017-08",
+    "2017-09",
+    "2017-10",
+    "2017-11",
+    "2017-12",
+    "2018-01",
+    "2018-02",
+    "2018-03",
+    "2018-04",
+    "2018-05",
+    "2018-06",
+    "2018-07",
+    "2018-08",
+    "2018-09",
+    "2018-10",
+    "2018-11",
+    "2018-12",
+    "2019-01",
+    "2019-02",
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09",
+    "2019-10",
+    "2019-11",
+    "2019-12",
+    "2020-01",
+    "2020-02",
+    "2020-03",
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07",
+    "2020-08",
+    "2020-09",
+    "2020-10",
+    "2020-11",
+    "2020-12",
+    "2021-01",
+    "2021-02",
+    "2021-03",
+    "2021-04",
+    "2021-05",
+    "2021-06",
+    "2021-07",
+    "2021-08",
+    "2021-09",
+    "2021-10",
+    "2021-11",
+    "2021-12",
+    "2022-01",
+    "2022-02",
+    "2022-03",
+    "2022-04",
+    "2022-05",
+    "2022-06",
+    "2022-07",
+    "2022-08",
+    "2022-09",
+    "2022-10",
+    "2022-11",
+    "2022-12",
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12"
+  ],
+  "protocol": {
+    "train_start": "2015-01",
+    "train_end": "2023-12",
+    "candidates": [
+      "R001_100",
+      "R101_200",
+      "R201_300",
+      "R301_400",
+      "R401_500"
+    ],
+    "buckets": {
+      "R001_100": [
+        1,
+        100
+      ],
+      "R101_200": [
+        101,
+        200
+      ],
+      "R201_300": [
+        201,
+        300
+      ],
+      "R301_400": [
+        301,
+        400
+      ],
+      "R401_500": [
+        401,
+        500
+      ]
+    },
+    "main_cost_bps": 30,
+    "metric": "sqrt(12)*monthly_net_mean/monthly_net_sample_std(ddof=1)",
+    "tie_break": [
+      "lower_mean_turnover",
+      "larger_rank_lower"
+    ],
+    "cost_convention": "actual executed notional * one-way bps, funded from cash, daily NAV"
+  },
+  "status": "frozen",
+  "config": {
+    "study": "A_share_point_in_time_size_gradient",
+    "train_start": "2015-01",
+    "train_end": "2023-12",
+    "test_start": "2024-01",
+    "test_end": "2025-12",
+    "initial_signal": "2014-12-31",
+    "universe": "historical Shanghai/Shenzhen mainboard, including former SME; exclude financials using contemporaneous evidence, CDR and listing age <252 sessions",
+    "min_listing_sessions": 252,
+    "buckets": {
+      "R001_100": [
+        1,
+        100
+      ],
+      "R101_200": [
+        101,
+        200
+      ],
+      "R201_300": [
+        201,
+        300
+      ],
+      "R301_400": [
+        301,
+        400
+      ],
+      "R401_500": [
+        401,
+        500
+      ]
+    },
+    "candidates": [
+      "R001_100",
+      "R101_200",
+      "R201_300",
+      "R301_400",
+      "R401_500"
+    ],
+    "reference": "R001_100",
+    "main_cost_bps": 30,
+    "cost_bps": [
+      10,
+      30,
+      50
+    ],
+    "hac_lags": 6,
+    "selection_metric": "sqrt(12)*monthly_net_mean/monthly_net_sample_std",
+    "return_convention": "prior-close planned adjusted share orders, opening fills subject to opening suspension and limit eligibility; only prior cash may fund buys, sale proceeds fund orders from next session; month-end net NAV",
+    "max_report_age_days": 240,
+    "limitations": [
+      "Daily-bar fills without queue, capacity or intraday matching",
+      "Actual next-session daily replacement is not an intraday immediate replacement",
+      "Historical point-in-time snapshots may contain vendor revisions",
+      "Early suspended-stock capitalization estimates affect ranks",
+      "No causal identification of shell value",
+      "Historical 2024-2025 holdout inspected before final rules"
+    ],
+    "security_aliases": [
+      {
+        "old": "000022.SZ",
+        "canonical": "001872.SZ",
+        "effective_date": "2018-12-26",
+        "source": "https://static.cninfo.com.cn/finalpage/2018-12-26/1205690369.PDF"
+      },
+      {
+        "old": "000043.SZ",
+        "canonical": "001914.SZ",
+        "effective_date": "2019-12-16",
+        "source": "https://www.szse.cn/disclosure/notice/general/t20191211_572534.html"
+      },
+      {
+        "old": "601313.SH",
+        "canonical": "601360.SH",
+        "effective_date": "2018-02-28",
+        "source": "https://static.cninfo.com.cn/finalpage/2018-04-04/1204585837.PDF"
+      }
+    ],
+    "repair_policy": {
+      "financial_snapshot_max_lag_sessions": 1,
+      "suspension_valuation": "verified_last_adjusted_quote_with_historical_shares_and_suspension_evidence",
+      "unresolved_terminal_policy": "documented delisting-date zero valuation; 50/100 percent last-quote sensitivities",
+      "no_future_backfill": true,
+      "status_snapshot_max_age_days": 185
+    },
+    "execution": "prior_close_orders_next_open_funded",
+    "terminal_fraction": 0.0,
+    "terminal_sensitivities": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "validation_disclosure": "2024-2025 historical holdout already inspected before final protocol update",
+    "st_policy": "Known-risk exclusion at monthly close; risk holdings submit exit orders at first subsequent open, sell proceeds fund preplanned forward replacement from the next session. Monthly rank list stays frozen.",
+    "delisting_trading_policy": "Names containing 退 identify publicly known delisting trading, never ordinary non-ST eligibility",
+    "selection_policy": "exclude_observable_risk_then_rank",
+    "intramonth_replacement": true,
+    "replacement_policy": "Prior-close candidate choice and fixed adjusted share quantity, funded only by prior available cash. No same-open reaction to another fill. Failed orders retry or advance only at the following planning close. Strategies independently use the monthly frozen rank list.",
+    "benchmark": {
+      "code": "000852.SH",
+      "name": "中证1000",
+      "return_type": "price_index"
+    },
+    "risk_free_rate_annual": 0.0,
+    "replacement_delay_sessions": 1,
+    "risk_exit_enabled": true,
+    "st_ablation_rules": {
+      "FILTER_ONLY": {
+        "risk_exit_enabled": false,
+        "intramonth_replacement": false
+      },
+      "EXIT_CASH": {
+        "risk_exit_enabled": true,
+        "intramonth_replacement": false
+      },
+      "EXIT_REPLACE": {
+        "risk_exit_enabled": true,
+        "intramonth_replacement": true
+      }
+    },
+    "protocol_version": "point_in_time_daily_orders_2026_10_22",
+    "buy_budget_policy": "Each order reserves quantity times the pre-open published upper-limit price plus cost; total reserved cash cannot exceed prior-close cash. Auction price savings are reused only at the next planning date.",
+    "historical_industry_policy": "Contemporaneous backup industry (same day or <=1 prior session), then already-published CSRC quarterly classification; no SW retrospective membership or future report-end company-type fallback.",
+    "input_gate_policy": "Preserve raw coverage gaps; require complete financial/capitalization inputs for observable nonrisk signal candidates. Stocks excluded by risk status already known on signal date cannot affect filtered rank."
+  },
+  "config_sha256": "5267e63bf272e8f09397ce3b774c5b36ff2561e7172a200d3b90aff29377bbeb",
+  "training_input_sha256": "9de9326fa0abe200a7c4b823cb93826850097d593521a1da4d54bbb22fca9051"
+}

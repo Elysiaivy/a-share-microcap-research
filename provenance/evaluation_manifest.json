@@ -1,0 +1,79 @@
+{
+  "config_sha256": "5267e63bf272e8f09397ce3b774c5b36ff2561e7172a200d3b90aff29377bbeb",
+  "selection_sha256": "bc8868bdc686d06ddf1832c4418d6be048ad40d67939834a61cec5dac5c04f5d",
+  "daily_input_sha256": "cf0f78043659702ebe9f7badb0bf74ce50051849691b99cd2dba2b59f1d90d7e",
+  "artifacts": [
+    {
+      "path": "results/monthly.csv",
+      "sha256": "58969f7b614524769ba44088f4ac8cc80f163122d7950e6b7cf2113bf14aba07"
+    },
+    {
+      "path": "results/performance.csv",
+      "sha256": "704e142cc37281b8e5564b9967761e8132533b8758e426a00f0ea13b7413e7df"
+    },
+    {
+      "path": "results/trades.csv",
+      "sha256": "4573b9435b8f00598e3fd07272ff7cbc0739b32a8b299903c0dd89a5dcaced98"
+    },
+    {
+      "path": "results/order_plans.csv",
+      "sha256": "f7f288ff8a64cb97ada617a59d0c288bcfff4fa9fb801f87a816c10e9cb9a89e"
+    },
+    {
+      "path": "results/holdings.csv",
+      "sha256": "21f457e8f2fa6bb500d71f1c9b16dfff227bb72c8a8408b8f071838c930706d9"
+    },
+    {
+      "path": "results/daily_nav.csv",
+      "sha256": "718e974ea0b4bf6934823838b98b97516a8f9ebba0495a4f1f861d651a078509"
+    },
+    {
+      "path": "results/daily_risk.csv",
+      "sha256": "a92dd5461314b653d37e5bed1a31a24fdd3509cf8e1249fb6a408130b3b9fbd8"
+    },
+    {
+      "path": "results/events.csv",
+      "sha256": "b9d47ba88702df8d32cc6a20995b623acac1cdbd7324ee3ce636b8f564a656f5"
+    },
+    {
+      "path": "results/blocked_orders.csv",
+      "sha256": "b836e9c02e2befb43fdffcbde50723009ee148397e792c003e0389d6c65e0cbd"
+    },
+    {
+      "path": "results/paired_tests.json",
+      "sha256": "79116c0d0913a5cfa6ca281980555e6bf30816cbd4fb6a927169ec12d6ce2106"
+    },
+    {
+      "path": "results/cost_sensitivity.csv",
+      "sha256": "a0761652054a57b26102582d661d43e6c4344634cdfa93a3d5327d5cc5e1c72f"
+    },
+    {
+      "path": "results/terminal_sensitivity.csv",
+      "sha256": "d534ce0c4c7cc12cb6f9bf502fc742549a729995a6d5ee20d9ee85485b5bee87"
+    },
+    {
+      "path": "results/st_ablation_monthly.csv",
+      "sha256": "0c08285475936187ca817197e4db994d54aaa8685d1934b027de965921731317"
+    },
+    {
+      "path": "results/st_ablation_performance.csv",
+      "sha256": "0df5a4751e26e72d27df692e8911997a9c9e71924a42a79c2ec57e74b1f2db97"
+    },
+    {
+      "path": "results/st_ablation_tests.csv",
+      "sha256": "b672985efc2501bf7dbb000abc4c8c4a402476594c8cad36dedf775bd8fd38ae"
+    },
+    {
+      "path": "results/st_ablation_execution.csv",
+      "sha256": "0ff402470bbd04b153552470845c1d46fc4c97b7cab86fcbf82cbacce9f62a8d"
+    },
+    {
+      "path": "data/prepared/benchmark_monthly.csv",
+      "sha256": "4fdc43442fa6544ee747ff12921938805bb57ad0cbc1b20fc9ff8de108522206"
+    },
+    {
+      "path": "data/prepared/benchmark_manifest.json",
+      "sha256": "c0f375fb83a1611a9b9692740d7f36f63462282393783309336046ec97e77213"
+    }
+  ]
+}

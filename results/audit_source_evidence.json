@@ -1,0 +1,2535 @@
+[
+  {
+    "category": "new_ST",
+    "stock_code": "002633.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "002633.SZ",
+            "trade_date": "20141231",
+            "open": 18.44,
+            "close": 17.78,
+            "pre_close": 18.07,
+            "amount": 42102.2905
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002633.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 1.523
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "002633.SZ",
+            "trade_date": "20150130",
+            "open": 19.92,
+            "close": 19.26,
+            "pre_close": 20.0,
+            "amount": 26234.268
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002633.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 1.523
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002633.SZ",
+        "name": "申科股份",
+        "start_date": "2011-11-22",
+        "end_date": "2015-01-27",
+        "ann_date": "2011-11-22"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002633.SZ",
+        "name": "申科股份",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-28",
+        "available_date": "2014-10-29",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "73084b1d00176f98ba71"
+        ],
+        "value": -11359463.17
+      },
+      {
+        "announcement_date": "2014-04-08",
+        "available_date": "2014-04-09",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "529a95d2a8e1a8730509"
+        ],
+        "value": -28540949.63
+      },
+      {
+        "announcement_date": "2013-10-22",
+        "available_date": "2013-10-23",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "ccee016da52acc7599e9"
+        ],
+        "value": -16378704.15
+      }
+    ]
+  },
+  {
+    "category": "new_ST",
+    "stock_code": "600984.SH",
+    "return_month": "2015-02",
+    "endpoints": [
+      {
+        "date": "2015-01-30",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "600984.SH",
+            "trade_date": "20150130",
+            "adj_factor": 1.464
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "600984.SH",
+            "trade_date": "20150130",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      },
+      {
+        "date": "2015-02-27",
+        "daily": [
+          {
+            "ts_code": "600984.SH",
+            "trade_date": "20150227",
+            "open": 9.0,
+            "close": 8.37,
+            "pre_close": 8.78,
+            "amount": 100837.575
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "600984.SH",
+            "trade_date": "20150227",
+            "adj_factor": 1.464
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "600984.SH",
+        "name": "建设机械",
+        "start_date": "2012-07-17",
+        "end_date": "2015-02-24",
+        "ann_date": "2012-07-16"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "600984.SH",
+        "name": "建设机械",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-30",
+        "available_date": "2014-10-31",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "c593069afa1c2d677abe"
+        ],
+        "value": -46062234.8
+      },
+      {
+        "announcement_date": "2014-04-05",
+        "available_date": "2014-04-08",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "0b80e8e2a7e76130d030"
+        ],
+        "value": -99851526.27
+      },
+      {
+        "announcement_date": "2013-10-31",
+        "available_date": "2013-11-01",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "038d4a832f4716eaf985"
+        ],
+        "value": -79064408.09
+      }
+    ]
+  },
+  {
+    "category": "new_ST",
+    "stock_code": "000711.SZ",
+    "return_month": "2015-03",
+    "endpoints": [
+      {
+        "date": "2015-02-27",
+        "daily": [
+          {
+            "ts_code": "000711.SZ",
+            "trade_date": "20150227",
+            "open": 14.98,
+            "close": 15.33,
+            "pre_close": 14.98,
+            "amount": 36798.2468
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000711.SZ",
+            "trade_date": "20150227",
+            "adj_factor": 4.056
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      },
+      {
+        "date": "2015-03-31",
+        "daily": [
+          {
+            "ts_code": "000711.SZ",
+            "trade_date": "20150331",
+            "open": 17.41,
+            "close": 18.28,
+            "pre_close": 17.41,
+            "amount": 103259.2707
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000711.SZ",
+            "trade_date": "20150331",
+            "adj_factor": 4.056
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "5bfadddaedd76835fa8c0b01f31dd62f892971d9ae31226eaf1595731dd37f87",
+          "b169c371f9d87c347a10af898e0f5133303c6da17395b8e3e898da7f4a34d904",
+          "84b256bad876d41a6e896cc076fe32dcddd9409ae36347716a0d519aec5948c2"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000711.SZ",
+        "name": "京蓝科技",
+        "start_date": "2014-11-17",
+        "end_date": "2015-03-10",
+        "ann_date": "2014-10-22"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000711.SZ",
+        "name": "京蓝科技",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-22",
+        "available_date": "2014-10-23",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "00759d69c6af61f84d06"
+        ],
+        "value": -32145269.5
+      },
+      {
+        "announcement_date": "2014-04-26",
+        "available_date": "2014-04-28",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "358223d357d253900d66"
+        ],
+        "value": -27437219.92
+      },
+      {
+        "announcement_date": "2013-10-25",
+        "available_date": "2013-10-28",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "f76d3fd39957428d10b9"
+        ],
+        "value": -2334607.4
+      }
+    ]
+  },
+  {
+    "category": "new_ST",
+    "stock_code": "000976.SZ",
+    "return_month": "2015-03",
+    "endpoints": [
+      {
+        "date": "2015-02-27",
+        "daily": [
+          {
+            "ts_code": "000976.SZ",
+            "trade_date": "20150227",
+            "open": 6.09,
+            "close": 6.09,
+            "pre_close": 5.54,
+            "amount": 2692.0723
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000976.SZ",
+            "trade_date": "20150227",
+            "adj_factor": 3.673
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      },
+      {
+        "date": "2015-03-31",
+        "daily": [
+          {
+            "ts_code": "000976.SZ",
+            "trade_date": "20150331",
+            "open": 8.77,
+            "close": 8.71,
+            "pre_close": 8.75,
+            "amount": 204821.5459
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000976.SZ",
+            "trade_date": "20150331",
+            "adj_factor": 3.673
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "5bfadddaedd76835fa8c0b01f31dd62f892971d9ae31226eaf1595731dd37f87",
+          "b169c371f9d87c347a10af898e0f5133303c6da17395b8e3e898da7f4a34d904",
+          "84b256bad876d41a6e896cc076fe32dcddd9409ae36347716a0d519aec5948c2"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000976.SZ",
+        "name": "春晖股份",
+        "start_date": "2011-03-29",
+        "end_date": "2015-03-10",
+        "ann_date": "2011-03-28"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000976.SZ",
+        "name": "春晖股份",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-27",
+        "available_date": "2014-10-28",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "3f6765dcf94efef60858"
+        ],
+        "value": -82350734.64
+      },
+      {
+        "announcement_date": "2014-04-29",
+        "available_date": "2014-04-30",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "c2a74fb661e90c4d89b6"
+        ],
+        "value": -97943865.03
+      },
+      {
+        "announcement_date": "2013-10-28",
+        "available_date": "2013-10-29",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "4bafcc15f067a81644e2"
+        ],
+        "value": -63010316.9
+      }
+    ]
+  },
+  {
+    "category": "loss",
+    "stock_code": "000004.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000004.SZ",
+            "trade_date": "20141231",
+            "open": 15.34,
+            "close": 15.57,
+            "pre_close": 15.35,
+            "amount": 25431.4829
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000004.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 4.064
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000004.SZ",
+            "trade_date": "20150130",
+            "open": 17.66,
+            "close": 17.35,
+            "pre_close": 17.69,
+            "amount": 33733.0118
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000004.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 4.064
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000004.SZ",
+        "name": "国农科技",
+        "start_date": "2011-06-08",
+        "end_date": "2020-11-30",
+        "ann_date": "2011-06-07"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000004.SZ",
+        "name": "国农科技",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-25",
+        "available_date": "2014-10-27",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "7e0f1912d384d574038e"
+        ],
+        "value": -5566809.55
+      },
+      {
+        "announcement_date": "2014-04-22",
+        "available_date": "2014-04-23",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "82c8a85502d9d10922fa"
+        ],
+        "value": -1033376.96
+      },
+      {
+        "announcement_date": "2013-10-26",
+        "available_date": "2013-10-28",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "62934d428695c9e88f4b"
+        ],
+        "value": 888054.32
+      }
+    ]
+  },
+  {
+    "category": "loss",
+    "stock_code": "000007.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000007.SZ",
+            "trade_date": "20141231",
+            "open": 13.39,
+            "close": 14.6,
+            "pre_close": 13.39,
+            "amount": 79731.269
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000007.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 5.521
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000007.SZ",
+            "trade_date": "20150130",
+            "open": 14.63,
+            "close": 14.46,
+            "pre_close": 14.63,
+            "amount": 33020.3945
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000007.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 5.521
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000007.SZ",
+        "name": "零七股份",
+        "start_date": "2012-05-04",
+        "end_date": "2016-02-16",
+        "ann_date": "2012-05-03"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000007.SZ",
+        "name": "零七股份",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-23",
+        "available_date": "2014-10-24",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "66e595cf1b1442fe5ca9"
+        ],
+        "value": -6707136.12
+      },
+      {
+        "announcement_date": "2014-04-26",
+        "available_date": "2014-04-28",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "dd478a756adb647f8b58"
+        ],
+        "value": 23267539.95
+      },
+      {
+        "announcement_date": "2013-10-24",
+        "available_date": "2013-10-25",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "5184b81aecdd1561294e"
+        ],
+        "value": 39241425.5
+      }
+    ]
+  },
+  {
+    "category": "loss",
+    "stock_code": "000019.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000019.SZ",
+            "trade_date": "20141231",
+            "open": 7.62,
+            "close": 7.69,
+            "pre_close": 7.74,
+            "amount": 24631.8086
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000019.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 2.446
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000019.SZ",
+            "trade_date": "20150130",
+            "open": 8.32,
+            "close": 8.52,
+            "pre_close": 8.3,
+            "amount": 44356.3437
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000019.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 2.446
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000019.SZ",
+        "name": "深深宝",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-24",
+        "available_date": "2014-10-27",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "557f647e291ea06dcaac"
+        ],
+        "value": -33871125.62
+      },
+      {
+        "announcement_date": "2014-03-18",
+        "available_date": "2014-03-19",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "fc339516b623c057ff26"
+        ],
+        "value": 43662208.27
+      },
+      {
+        "announcement_date": "2013-10-24",
+        "available_date": "2013-10-25",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "19e7d6f2c0b15a4f2294"
+        ],
+        "value": 54224164.02
+      }
+    ]
+  },
+  {
+    "category": "loss",
+    "stock_code": "000020.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000020.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 1.752
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000020.SZ",
+            "trade_date": "20141231",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000020.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 1.752
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000020.SZ",
+            "trade_date": "20150130",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000020.SZ",
+        "name": "深华发A",
+        "start_date": "2009-05-19",
+        "end_date": "NaT",
+        "ann_date": "2009-05-18"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000020.SZ",
+        "name": "深华发",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-25",
+        "available_date": "2014-10-27",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "ca2a42b1a01813ec391d"
+        ],
+        "value": 990696.0
+      },
+      {
+        "announcement_date": "2014-04-22",
+        "available_date": "2014-04-23",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "292d46404e82bb801a93"
+        ],
+        "value": -6517401.44
+      },
+      {
+        "announcement_date": "2013-10-28",
+        "available_date": "2013-10-29",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "ca1cdca5bcf3a3339360"
+        ],
+        "value": 808082.68
+      }
+    ]
+  },
+  {
+    "category": "corporate_action",
+    "stock_code": "002270.SZ",
+    "return_month": "2015-03",
+    "endpoints": [
+      {
+        "date": "2015-02-27",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "002270.SZ",
+            "trade_date": "20150227",
+            "adj_factor": 1.362
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "002270.SZ",
+            "trade_date": "20150227",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      },
+      {
+        "date": "2015-03-31",
+        "daily": [
+          {
+            "ts_code": "002270.SZ",
+            "trade_date": "20150331",
+            "open": 19.12,
+            "close": 19.55,
+            "pre_close": 19.37,
+            "amount": 239305.7921
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002270.SZ",
+            "trade_date": "20150331",
+            "adj_factor": 1.366
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "5bfadddaedd76835fa8c0b01f31dd62f892971d9ae31226eaf1595731dd37f87",
+          "b169c371f9d87c347a10af898e0f5133303c6da17395b8e3e898da7f4a34d904",
+          "84b256bad876d41a6e896cc076fe32dcddd9409ae36347716a0d519aec5948c2"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002270.SZ",
+        "name": "法因数控",
+        "start_date": "2008-09-05",
+        "end_date": "2016-07-12",
+        "ann_date": "2008-09-05"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002270.SZ",
+        "name": "法因数控",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2015-02-07",
+        "available_date": "2015-02-09",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-12-31",
+        "source_ids": [
+          "748ccce05339ded7df0f"
+        ],
+        "value": 18375032.52
+      }
+    ]
+  },
+  {
+    "category": "corporate_action",
+    "stock_code": "002331.SZ",
+    "return_month": "2015-03",
+    "endpoints": [
+      {
+        "date": "2015-02-27",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "002331.SZ",
+            "trade_date": "20150227",
+            "adj_factor": 3.68
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "002331.SZ",
+            "trade_date": "20150227",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      },
+      {
+        "date": "2015-03-31",
+        "daily": [
+          {
+            "ts_code": "002331.SZ",
+            "trade_date": "20150331",
+            "open": 16.98,
+            "close": 17.1,
+            "pre_close": 16.65,
+            "amount": 663703.3383
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002331.SZ",
+            "trade_date": "20150331",
+            "adj_factor": 4.43
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "5bfadddaedd76835fa8c0b01f31dd62f892971d9ae31226eaf1595731dd37f87",
+          "b169c371f9d87c347a10af898e0f5133303c6da17395b8e3e898da7f4a34d904",
+          "84b256bad876d41a6e896cc076fe32dcddd9409ae36347716a0d519aec5948c2"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002331.SZ",
+        "name": "皖通科技",
+        "start_date": "2010-01-06",
+        "end_date": "NaT",
+        "ann_date": "2010-01-06"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002331.SZ",
+        "name": "皖通科技",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2015-02-17",
+        "available_date": "2015-02-25",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-12-31",
+        "source_ids": [
+          "5e0c5434917fbb601b34"
+        ],
+        "value": 57132485.37
+      }
+    ]
+  },
+  {
+    "category": "corporate_action",
+    "stock_code": "002380.SZ",
+    "return_month": "2015-03",
+    "endpoints": [
+      {
+        "date": "2015-02-27",
+        "daily": [
+          {
+            "ts_code": "002380.SZ",
+            "trade_date": "20150227",
+            "open": 30.1,
+            "close": 31.4,
+            "pre_close": 30.28,
+            "amount": 57990.6135
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002380.SZ",
+            "trade_date": "20150227",
+            "adj_factor": 1.555
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      },
+      {
+        "date": "2015-03-31",
+        "daily": [
+          {
+            "ts_code": "002380.SZ",
+            "trade_date": "20150331",
+            "open": 43.35,
+            "close": 44.2,
+            "pre_close": 43.8,
+            "amount": 128996.5191
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002380.SZ",
+            "trade_date": "20150331",
+            "adj_factor": 1.56
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "5bfadddaedd76835fa8c0b01f31dd62f892971d9ae31226eaf1595731dd37f87",
+          "b169c371f9d87c347a10af898e0f5133303c6da17395b8e3e898da7f4a34d904",
+          "84b256bad876d41a6e896cc076fe32dcddd9409ae36347716a0d519aec5948c2"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002380.SZ",
+        "name": "科远股份",
+        "start_date": "2010-03-31",
+        "end_date": "2019-05-30",
+        "ann_date": "2010-03-31"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002380.SZ",
+        "name": "科远股份",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2015-02-14",
+        "available_date": "2015-02-16",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-12-31",
+        "source_ids": [
+          "8bc63f97abf45b6ddf17"
+        ],
+        "value": 42529328.15
+      }
+    ]
+  },
+  {
+    "category": "corporate_action",
+    "stock_code": "002575.SZ",
+    "return_month": "2015-03",
+    "endpoints": [
+      {
+        "date": "2015-02-27",
+        "daily": [
+          {
+            "ts_code": "002575.SZ",
+            "trade_date": "20150227",
+            "open": 13.93,
+            "close": 13.92,
+            "pre_close": 13.9,
+            "amount": 63438.6813
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002575.SZ",
+            "trade_date": "20150227",
+            "adj_factor": 2.028
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "3b5d0038bc437dbe92f8cdfd28ff4d2ad2c7acd19084ffc8c639f3eab3eb258a",
+          "f141e2c574115ca75c83ab0e39b0123a5f49dd4fef52ef67a0604f5f62c7cf03",
+          "57e06cf925a3faee2d7cb53cfff578e47f24a7028a1515f291d1b9481309ae66"
+        ]
+      },
+      {
+        "date": "2015-03-31",
+        "daily": [
+          {
+            "ts_code": "002575.SZ",
+            "trade_date": "20150331",
+            "open": 11.14,
+            "close": 11.29,
+            "pre_close": 11.14,
+            "amount": 277187.61
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002575.SZ",
+            "trade_date": "20150331",
+            "adj_factor": 4.485
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "5bfadddaedd76835fa8c0b01f31dd62f892971d9ae31226eaf1595731dd37f87",
+          "b169c371f9d87c347a10af898e0f5133303c6da17395b8e3e898da7f4a34d904",
+          "84b256bad876d41a6e896cc076fe32dcddd9409ae36347716a0d519aec5948c2"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002575.SZ",
+        "name": "群兴玩具",
+        "start_date": "2011-04-22",
+        "end_date": "2020-04-21",
+        "ann_date": "2011-04-22"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002575.SZ",
+        "name": "群兴玩具",
+        "observation_date": "2014-12-31",
+        "availability_date": "2015-01-22",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "8e9a22efaf06c475f6baaea2990241a7ea2996c397f4d4760fa4d0cc9ff4a30c",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2015-02-13",
+        "available_date": "2015-02-16",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-12-31",
+        "source_ids": [
+          "b889c972b6b4556d9c75"
+        ],
+        "value": 14865866.87
+      }
+    ]
+  },
+  {
+    "category": "suspension",
+    "stock_code": "000678.SZ",
+    "return_month": "2017-12",
+    "endpoints": [
+      {
+        "date": "2017-11-30",
+        "daily": [
+          {
+            "ts_code": "000678.SZ",
+            "trade_date": "20171130",
+            "open": 8.02,
+            "close": 8.06,
+            "pre_close": 8.05,
+            "amount": 22137.305
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000678.SZ",
+            "trade_date": "20171130",
+            "adj_factor": 4.96
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "6b44265495a79c4b96e44996216491160a27690ae7d0a0ecd04787393e57bf82",
+          "2e972c2d2e555b2f32b3cce62d375162be91bf553de653d1d2bad12161e10063",
+          "36361f05a4662ffd91fd0ee79a3a27ab1748a852df818ad0cc1f4d296d91f15f"
+        ]
+      },
+      {
+        "date": "2017-12-29",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000678.SZ",
+            "trade_date": "20171229",
+            "adj_factor": 4.96
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000678.SZ",
+            "trade_date": "20171229",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "f97e9712148df62c43e6cac1168e425e5a6ed9869d16e21b9fac4299d6731c19",
+          "5d60adcca7530634b3b36b888a19e9da20e6ea9a54969279278958c1f5427801",
+          "b709049dfa5e2809c005384cd97b25c1895b5634fe81fd52f2f96f5fb76d4625"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000678.SZ",
+        "name": "襄阳轴承",
+        "start_date": "2006-10-09",
+        "end_date": "NaT",
+        "ann_date": "2006-09-28"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000678.SZ",
+        "name": "襄阳轴承",
+        "observation_date": "2017-11-30",
+        "availability_date": "2017-11-30",
+        "source": "bak_basic",
+        "source_sha256": "b048ecec9609c73a3c87ce28587fb9a7a729b14eeea82ccf1b08c42a97b1c3a1",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2017-10-28",
+        "available_date": "2017-10-30",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2017-09-30",
+        "source_ids": [
+          "2e338f9aece15b78a055"
+        ],
+        "value": 7076143.74
+      },
+      {
+        "announcement_date": "2017-04-26",
+        "available_date": "2017-04-27",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2016-12-31",
+        "source_ids": [
+          "7b5368a1c8c25bd99e00"
+        ],
+        "value": 11652477.84
+      },
+      {
+        "announcement_date": "2016-10-28",
+        "available_date": "2016-10-31",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2016-09-30",
+        "source_ids": [
+          "9b555c25839082a7eaa3"
+        ],
+        "value": 1682418.79
+      }
+    ]
+  },
+  {
+    "category": "suspension",
+    "stock_code": "000812.SZ",
+    "return_month": "2017-12",
+    "endpoints": [
+      {
+        "date": "2017-11-30",
+        "daily": [
+          {
+            "ts_code": "000812.SZ",
+            "trade_date": "20171130",
+            "open": 7.7,
+            "close": 7.56,
+            "pre_close": 7.72,
+            "amount": 60450.885
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000812.SZ",
+            "trade_date": "20171130",
+            "adj_factor": 4.888
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "6b44265495a79c4b96e44996216491160a27690ae7d0a0ecd04787393e57bf82",
+          "2e972c2d2e555b2f32b3cce62d375162be91bf553de653d1d2bad12161e10063",
+          "36361f05a4662ffd91fd0ee79a3a27ab1748a852df818ad0cc1f4d296d91f15f"
+        ]
+      },
+      {
+        "date": "2017-12-29",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000812.SZ",
+            "trade_date": "20171229",
+            "adj_factor": 4.888
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000812.SZ",
+            "trade_date": "20171229",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "f97e9712148df62c43e6cac1168e425e5a6ed9869d16e21b9fac4299d6731c19",
+          "5d60adcca7530634b3b36b888a19e9da20e6ea9a54969279278958c1f5427801",
+          "b709049dfa5e2809c005384cd97b25c1895b5634fe81fd52f2f96f5fb76d4625"
+        ]
+      }
+    ],
+    "visible_names": [],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000812.SZ",
+        "name": "陕西金叶",
+        "observation_date": "2017-11-30",
+        "availability_date": "2017-11-30",
+        "source": "bak_basic",
+        "source_sha256": "b048ecec9609c73a3c87ce28587fb9a7a729b14eeea82ccf1b08c42a97b1c3a1",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2017-10-31",
+        "available_date": "2017-11-01",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2017-09-30",
+        "source_ids": [
+          "52595075844a7d56b6d8"
+        ],
+        "value": 7251007.47
+      },
+      {
+        "announcement_date": "2017-03-18",
+        "available_date": "2017-03-20",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2016-12-31",
+        "source_ids": [
+          "60b82b1abf01c0c75d04"
+        ],
+        "value": 34926666.56
+      },
+      {
+        "announcement_date": "2016-10-27",
+        "available_date": "2016-10-28",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2016-09-30",
+        "source_ids": [
+          "4026a3bbb99a7c9bf96d"
+        ],
+        "value": 21534517.85
+      }
+    ]
+  },
+  {
+    "category": "suspension",
+    "stock_code": "000995.SZ",
+    "return_month": "2017-12",
+    "endpoints": [
+      {
+        "date": "2017-11-30",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000995.SZ",
+            "trade_date": "20171130",
+            "adj_factor": 1.686
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000995.SZ",
+            "trade_date": "20171130",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "6b44265495a79c4b96e44996216491160a27690ae7d0a0ecd04787393e57bf82",
+          "2e972c2d2e555b2f32b3cce62d375162be91bf553de653d1d2bad12161e10063",
+          "36361f05a4662ffd91fd0ee79a3a27ab1748a852df818ad0cc1f4d296d91f15f"
+        ]
+      },
+      {
+        "date": "2017-12-29",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000995.SZ",
+            "trade_date": "20171229",
+            "adj_factor": 1.686
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000995.SZ",
+            "trade_date": "20171229",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "f97e9712148df62c43e6cac1168e425e5a6ed9869d16e21b9fac4299d6731c19",
+          "5d60adcca7530634b3b36b888a19e9da20e6ea9a54969279278958c1f5427801",
+          "b709049dfa5e2809c005384cd97b25c1895b5634fe81fd52f2f96f5fb76d4625"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000995.SZ",
+        "name": "皇台酒业",
+        "start_date": "2017-06-15",
+        "end_date": "2018-05-02",
+        "ann_date": "2017-06-14"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000995.SZ",
+        "name": "皇台酒业",
+        "observation_date": "2017-11-30",
+        "availability_date": "2017-11-30",
+        "source": "bak_basic",
+        "source_sha256": "b048ecec9609c73a3c87ce28587fb9a7a729b14eeea82ccf1b08c42a97b1c3a1",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2017-10-31",
+        "available_date": "2017-11-01",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2017-09-30",
+        "source_ids": [
+          "941018dea3089a4a08fd"
+        ],
+        "value": -67403550.58
+      },
+      {
+        "announcement_date": null,
+        "available_date": null,
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2016-12-31",
+        "source_ids": [],
+        "value": null
+      },
+      {
+        "announcement_date": "2016-10-27",
+        "available_date": "2016-10-28",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2016-09-30",
+        "source_ids": [
+          "ba9c1c3bd80634594cce"
+        ],
+        "value": -108258350.42
+      }
+    ]
+  },
+  {
+    "category": "suspension",
+    "stock_code": "002082.SZ",
+    "return_month": "2017-12",
+    "endpoints": [
+      {
+        "date": "2017-11-30",
+        "daily": [
+          {
+            "ts_code": "002082.SZ",
+            "trade_date": "20171130",
+            "open": 14.88,
+            "close": 14.32,
+            "pre_close": 14.24,
+            "amount": 86452.71
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "002082.SZ",
+            "trade_date": "20171130",
+            "adj_factor": 2.838
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "6b44265495a79c4b96e44996216491160a27690ae7d0a0ecd04787393e57bf82",
+          "2e972c2d2e555b2f32b3cce62d375162be91bf553de653d1d2bad12161e10063",
+          "36361f05a4662ffd91fd0ee79a3a27ab1748a852df818ad0cc1f4d296d91f15f"
+        ]
+      },
+      {
+        "date": "2017-12-29",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "002082.SZ",
+            "trade_date": "20171229",
+            "adj_factor": 2.838
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "002082.SZ",
+            "trade_date": "20171229",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "f97e9712148df62c43e6cac1168e425e5a6ed9869d16e21b9fac4299d6731c19",
+          "5d60adcca7530634b3b36b888a19e9da20e6ea9a54969279278958c1f5427801",
+          "b709049dfa5e2809c005384cd97b25c1895b5634fe81fd52f2f96f5fb76d4625"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002082.SZ",
+        "name": "栋梁新材",
+        "start_date": "2006-11-20",
+        "end_date": "2018-01-23",
+        "ann_date": "2006-11-20"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002082.SZ",
+        "name": "栋梁新材",
+        "observation_date": "2017-11-30",
+        "availability_date": "2017-11-30",
+        "source": "bak_basic",
+        "source_sha256": "b048ecec9609c73a3c87ce28587fb9a7a729b14eeea82ccf1b08c42a97b1c3a1",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2017-10-24",
+        "available_date": "2017-10-25",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2017-09-30",
+        "source_ids": [
+          "358568b6f2c77af5bdcc"
+        ],
+        "value": 60533950.28
+      },
+      {
+        "announcement_date": "2017-04-08",
+        "available_date": "2017-04-10",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2016-12-31",
+        "source_ids": [
+          "05004c19999dfcd846eb"
+        ],
+        "value": 69735588.87
+      },
+      {
+        "announcement_date": "2016-10-27",
+        "available_date": "2016-10-28",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2016-09-30",
+        "source_ids": [
+          "8f83f3c6bf0e0dd81dba"
+        ],
+        "value": 56659827.16
+      }
+    ]
+  },
+  {
+    "category": "delisting",
+    "stock_code": "600321.SH",
+    "return_month": "2024-06",
+    "endpoints": [
+      {
+        "date": "2024-05-31",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "600321.SH",
+            "trade_date": "20240531",
+            "adj_factor": 7.785
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "600321.SH",
+            "trade_date": "20240531",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "f4e42173c471e5b1153554bb7273fbc61b85e92708c0f8d421e52c23b6965988",
+          "d2a414a2b752569b31e4c66c6066bea0305dcb30cc6cabfaf9dbe4d7d4a713eb",
+          "f6d9310163b1bc66251af023caea1c7354909b893e70392fd65703afe5b2e3ab"
+        ]
+      },
+      {
+        "date": "2024-06-28",
+        "daily": [],
+        "factor": [],
+        "suspension": [],
+        "hashes": [
+          "3e7c0c4ac4daac4b2bb6791d79319955d0ffa156ff3d01c9d428393ce3713d00",
+          "630e4238df1b1b1b5d4660a3919058afac9a6a6cdc0ddb4c6d6650268af2a429",
+          "f6d8f47d741ec26c97d45e5a0b40c0ce92d4348ab6a951db139b33ef5926ddae"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "600321.SH",
+        "name": "正源股份",
+        "start_date": "2020-04-21",
+        "end_date": "NaT",
+        "ann_date": "2020-04-20"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "600321.SH",
+        "name": "正源股份",
+        "observation_date": "2024-05-31",
+        "availability_date": "2024-05-31",
+        "source": "bak_basic",
+        "source_sha256": "dc2824f8e7e579c09c3cbbc5e18b00f793e52b15245f4750dbc3183dd49f60e8",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2024-04-30",
+        "available_date": "2024-05-06",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2024-03-31",
+        "source_ids": [
+          "18e610b2c074c1544260",
+          "41baa5dc0fd64b4d2216"
+        ],
+        "value": -14469593.89
+      },
+      {
+        "announcement_date": "2024-03-29",
+        "available_date": "2024-04-01",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2023-12-31",
+        "source_ids": [
+          "5773b4f1bd2a7e5f9ab6"
+        ],
+        "value": -125052739.6
+      },
+      {
+        "announcement_date": "2023-04-28",
+        "available_date": "2023-05-04",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2023-03-31",
+        "source_ids": [
+          "638713b4dd1096d2f169"
+        ],
+        "value": 15216056.13
+      }
+    ]
+  },
+  {
+    "category": "delisting",
+    "stock_code": "000982.SZ",
+    "return_month": "2024-08",
+    "endpoints": [
+      {
+        "date": "2024-07-31",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000982.SZ",
+            "trade_date": "20240731",
+            "adj_factor": 16.841
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000982.SZ",
+            "trade_date": "20240731",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "b28ce9ea48e8f322c7843dc577f3d4b5b8a1dc9841e8c9956f9df4fc7591a137",
+          "d86a9cb072efe1af36a8c8152a40ade4d004910ed540b507d92518dd55446b30",
+          "75e6f3b36df5f0f86fa7a1a933c15a018f1be32c23b2d3e13ff5a6eac40dc6c8"
+        ]
+      },
+      {
+        "date": "2024-08-30",
+        "daily": [],
+        "factor": [],
+        "suspension": [],
+        "hashes": [
+          "bc91aae1cbc7be9913d1bfb691cd1590378f95cbc70253b6d4c5d6879d3c5f33",
+          "7b5ff60ad626d12dd3c354c3e114a5264e54371f45068bafa7842504c34fb367",
+          "ee23d740e9347da67148900a07942ed406bdee38e1580278d61455549a65085e"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000982.SZ",
+        "name": "中银绒业",
+        "start_date": "2021-06-08",
+        "end_date": "NaT",
+        "ann_date": "2021-06-07"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000982.SZ",
+        "name": "中银绒业",
+        "observation_date": "2024-07-31",
+        "availability_date": "2024-07-31",
+        "source": "bak_basic",
+        "source_sha256": "f05d8a645cd202ec8aac53d65b10842c36cfb6d670f0b45123ff0d89549cb2e7",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2024-04-26",
+        "available_date": "2024-04-29",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2024-03-31",
+        "source_ids": [
+          "45c4a9a23aa0548bfc35",
+          "c06c29dbf6c4191494d9"
+        ],
+        "value": -10630343.0
+      },
+      {
+        "announcement_date": "2024-04-12",
+        "available_date": "2024-04-15",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2023-12-31",
+        "source_ids": [
+          "2ede602962e42d9a0b37",
+          "cb26687fc89a45abb5e5"
+        ],
+        "value": -135259034.21
+      },
+      {
+        "announcement_date": "2023-04-26",
+        "available_date": "2023-04-27",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2023-03-31",
+        "source_ids": [
+          "06297e07f81419c42aa3"
+        ],
+        "value": 7459374.49
+      }
+    ]
+  },
+  {
+    "category": "delisting",
+    "stock_code": "002505.SZ",
+    "return_month": "2024-08",
+    "endpoints": [
+      {
+        "date": "2024-07-31",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "002505.SZ",
+            "trade_date": "20240731",
+            "adj_factor": 15.185
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "002505.SZ",
+            "trade_date": "20240731",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "b28ce9ea48e8f322c7843dc577f3d4b5b8a1dc9841e8c9956f9df4fc7591a137",
+          "d86a9cb072efe1af36a8c8152a40ade4d004910ed540b507d92518dd55446b30",
+          "75e6f3b36df5f0f86fa7a1a933c15a018f1be32c23b2d3e13ff5a6eac40dc6c8"
+        ]
+      },
+      {
+        "date": "2024-08-30",
+        "daily": [],
+        "factor": [],
+        "suspension": [],
+        "hashes": [
+          "bc91aae1cbc7be9913d1bfb691cd1590378f95cbc70253b6d4c5d6879d3c5f33",
+          "7b5ff60ad626d12dd3c354c3e114a5264e54371f45068bafa7842504c34fb367",
+          "ee23d740e9347da67148900a07942ed406bdee38e1580278d61455549a65085e"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "002505.SZ",
+        "name": "鹏都农牧",
+        "start_date": "2021-01-04",
+        "end_date": "NaT",
+        "ann_date": "2020-12-10"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "002505.SZ",
+        "name": "鹏都农牧",
+        "observation_date": "2024-07-31",
+        "availability_date": "2024-07-31",
+        "source": "bak_basic",
+        "source_sha256": "f05d8a645cd202ec8aac53d65b10842c36cfb6d670f0b45123ff0d89549cb2e7",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2024-04-30",
+        "available_date": "2024-05-06",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2024-03-31",
+        "source_ids": [
+          "34d3dd6c4f306919bf4a",
+          "410cac80ab8aafbda7a5"
+        ],
+        "value": -116393535.02
+      },
+      {
+        "announcement_date": "2024-04-26",
+        "available_date": "2024-04-29",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2023-12-31",
+        "source_ids": [
+          "237fdebf689d04db7e24",
+          "8bd65faada10197ca9d4"
+        ],
+        "value": -934739356.69
+      },
+      {
+        "announcement_date": "2023-04-29",
+        "available_date": "2023-05-04",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2023-03-31",
+        "source_ids": [
+          "26655f1efd5d6679e8cd"
+        ],
+        "value": -39500793.85
+      }
+    ]
+  },
+  {
+    "category": "delisting",
+    "stock_code": "000861.SZ",
+    "return_month": "2024-09",
+    "endpoints": [
+      {
+        "date": "2024-08-30",
+        "daily": [],
+        "factor": [
+          {
+            "ts_code": "000861.SZ",
+            "trade_date": "20240830",
+            "adj_factor": 18.791
+          }
+        ],
+        "suspension": [
+          {
+            "ts_code": "000861.SZ",
+            "trade_date": "20240830",
+            "suspend_timing": null,
+            "suspend_type": "S"
+          }
+        ],
+        "hashes": [
+          "bc91aae1cbc7be9913d1bfb691cd1590378f95cbc70253b6d4c5d6879d3c5f33",
+          "7b5ff60ad626d12dd3c354c3e114a5264e54371f45068bafa7842504c34fb367",
+          "ee23d740e9347da67148900a07942ed406bdee38e1580278d61455549a65085e"
+        ]
+      },
+      {
+        "date": "2024-09-30",
+        "daily": [],
+        "factor": [],
+        "suspension": [],
+        "hashes": [
+          "59cdb4a08fcb41c04924ec5eebf5e99bd8859f93203b2d7142911d04e826c479",
+          "17017af0977dc6a12a7e1c3d9076f1ef9184745d6d808b578b982c8bf51a406e",
+          "b77024e3818bde6a001fbe1ae9c069f45907c31fcac3534f23a412e00e56d0cb"
+        ]
+      }
+    ],
+    "visible_names": [],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000861.SZ",
+        "name": "海印股份",
+        "observation_date": "2024-08-30",
+        "availability_date": "2024-08-30",
+        "source": "bak_basic",
+        "source_sha256": "d194e6e582b25867e47489f72e4187d1226a9cef517f2dfe29fa80861be7832b",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2024-04-30",
+        "available_date": "2024-05-06",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2024-03-31",
+        "source_ids": [
+          "782142249b55ad61042c",
+          "cb94e8c019b08120a3a1"
+        ],
+        "value": 140826690.06
+      },
+      {
+        "announcement_date": "2024-04-30",
+        "available_date": "2024-05-06",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2023-12-31",
+        "source_ids": [
+          "005310c856fe8e195e23",
+          "01f69691d1bdda04a966"
+        ],
+        "value": -155919347.55
+      },
+      {
+        "announcement_date": "2023-04-26",
+        "available_date": "2023-04-27",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2023-03-31",
+        "source_ids": [
+          "3f53fcf23a3f05cd2bf0"
+        ],
+        "value": -87508470.74
+      }
+    ]
+  },
+  {
+    "category": "ordinary",
+    "stock_code": "000014.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000014.SZ",
+            "trade_date": "20141231",
+            "open": 13.51,
+            "close": 13.8,
+            "pre_close": 13.58,
+            "amount": 51856.1439
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000014.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 5.359
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000014.SZ",
+            "trade_date": "20150130",
+            "open": 14.45,
+            "close": 14.4,
+            "pre_close": 14.41,
+            "amount": 62740.8409
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000014.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 5.359
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000014.SZ",
+        "name": "沙河股份",
+        "start_date": "2006-10-09",
+        "end_date": "NaT",
+        "ann_date": "2006-09-28"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000014.SZ",
+        "name": "沙河股份",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-30",
+        "available_date": "2014-10-31",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "38c9cb04640c988299d1"
+        ],
+        "value": 13315366.76
+      },
+      {
+        "announcement_date": "2014-03-31",
+        "available_date": "2014-04-01",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "1bf3802e719cd3240a40"
+        ],
+        "value": 28754423.82
+      },
+      {
+        "announcement_date": "2013-10-29",
+        "available_date": "2013-10-30",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "ff04d01e68aa44e87000"
+        ],
+        "value": -10609124.09
+      }
+    ]
+  },
+  {
+    "category": "ordinary",
+    "stock_code": "000023.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000023.SZ",
+            "trade_date": "20141231",
+            "open": 15.85,
+            "close": 15.9,
+            "pre_close": 15.85,
+            "amount": 41785.603
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000023.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 2.631
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000023.SZ",
+            "trade_date": "20150130",
+            "open": 18.88,
+            "close": 18.43,
+            "pre_close": 19.07,
+            "amount": 54285.9827
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000023.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 2.631
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000023.SZ",
+        "name": "深天地A",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-27",
+        "available_date": "2014-10-28",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "0216c318f95219cff37e"
+        ],
+        "value": 16052107.26
+      },
+      {
+        "announcement_date": "2014-04-28",
+        "available_date": "2014-04-29",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "b139be978c0acf60a5fb"
+        ],
+        "value": 15031454.08
+      },
+      {
+        "announcement_date": "2013-10-30",
+        "available_date": "2013-10-31",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "a6932b490bf1683a16da"
+        ],
+        "value": 13259540.54
+      }
+    ]
+  },
+  {
+    "category": "ordinary",
+    "stock_code": "000034.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000034.SZ",
+            "trade_date": "20141231",
+            "open": 6.83,
+            "close": 6.84,
+            "pre_close": 6.89,
+            "amount": 22878.7049
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000034.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 2.961
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000034.SZ",
+            "trade_date": "20150130",
+            "open": 6.74,
+            "close": 6.77,
+            "pre_close": 6.8,
+            "amount": 34196.3953
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000034.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 2.961
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000034.SZ",
+        "name": "深信泰丰",
+        "start_date": "2011-04-01",
+        "end_date": "2016-04-24",
+        "ann_date": "2011-03-31"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000034.SZ",
+        "name": "深信泰丰",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-23",
+        "available_date": "2014-10-24",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "a9bff533dfe0f32dede0"
+        ],
+        "value": 54717008.45
+      },
+      {
+        "announcement_date": "2014-03-12",
+        "available_date": "2014-03-13",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "0a5d6e57f6988c139fdf"
+        ],
+        "value": 16766914.58
+      },
+      {
+        "announcement_date": "2013-10-23",
+        "available_date": "2013-10-24",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "5fb6842c3fb669c858fb"
+        ],
+        "value": 5867107.89
+      }
+    ]
+  },
+  {
+    "category": "ordinary",
+    "stock_code": "000040.SZ",
+    "return_month": "2015-01",
+    "endpoints": [
+      {
+        "date": "2014-12-31",
+        "daily": [
+          {
+            "ts_code": "000040.SZ",
+            "trade_date": "20141231",
+            "open": 6.35,
+            "close": 6.57,
+            "pre_close": 6.36,
+            "amount": 242473.3207
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000040.SZ",
+            "trade_date": "20141231",
+            "adj_factor": 4.272
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "96869b0cf76454cfc6935e13b9b98420b2c86860ce9201d9de5e6b57b27bea05",
+          "2c32abee1cdef93c136be2c7a8cd935f71899d2040b30fa510a96b3239932ff0",
+          "5d920562b0964d188317cf63bd72318fec1b6ac760459ed7775dcce9ac4c52dc"
+        ]
+      },
+      {
+        "date": "2015-01-30",
+        "daily": [
+          {
+            "ts_code": "000040.SZ",
+            "trade_date": "20150130",
+            "open": 6.85,
+            "close": 7.59,
+            "pre_close": 6.9,
+            "amount": 122111.8889
+          }
+        ],
+        "factor": [
+          {
+            "ts_code": "000040.SZ",
+            "trade_date": "20150130",
+            "adj_factor": 4.272
+          }
+        ],
+        "suspension": [],
+        "hashes": [
+          "72800804fdce334b6c8799686817cba360ff9c71f9daf793f931f4f7b37f812e",
+          "74855837b3cfa16fea85ba3ac536f8e8aa9b18b3ce2e600efc7de282e5679b0f",
+          "3d9afeb555cd99b7a4b2f9a2a021d955401ffcf900db725c2008cfa7e13bd73f"
+        ]
+      }
+    ],
+    "visible_names": [
+      {
+        "ts_code": "000040.SZ",
+        "name": "宝安地产",
+        "start_date": "2011-06-20",
+        "end_date": "2016-07-14",
+        "ann_date": "2011-03-30"
+      }
+    ],
+    "dated_name_evidence": [
+      {
+        "ts_code": "000040.SZ",
+        "name": "宝安地产",
+        "observation_date": "2014-09-30",
+        "availability_date": "2014-10-13",
+        "source": "published_CSRC_quarterly",
+        "source_sha256": "65c30705dfe622806d939ff1776fbf88ea6de98f977520d18821ff6cce6d69dd",
+        "risk": "0"
+      }
+    ],
+    "ttm_trace": [
+      {
+        "announcement_date": "2014-10-22",
+        "available_date": "2014-10-23",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2014-09-30",
+        "source_ids": [
+          "a9c087f853983ff96022"
+        ],
+        "value": 14310136.57
+      },
+      {
+        "announcement_date": "2014-03-29",
+        "available_date": "2014-03-31",
+        "coefficient": 1,
+        "conflicting_versions": false,
+        "report_date": "2013-12-31",
+        "source_ids": [
+          "13cb7e94b08db0b37603"
+        ],
+        "value": 103031902.9
+      },
+      {
+        "announcement_date": "2013-10-26",
+        "available_date": "2013-10-28",
+        "coefficient": -1,
+        "conflicting_versions": false,
+        "report_date": "2013-09-30",
+        "source_ids": [
+          "1412922ea867673f949d"
+        ],
+        "value": 88504936.34
+      }
+    ]
+  }
+]

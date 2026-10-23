@@ -1,0 +1,4 @@
+period,smallest_best,strictly_decreasing,best_band,rank_cagr_spearman
+TRAIN,True,False,R001_100,-0.8999999999999998
+TEST,True,False,R001_100,-0.3
+ALL,True,False,R001_100,-0.8999999999999998

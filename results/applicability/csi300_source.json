@@ -1,0 +1,10 @@
+{
+  "manifest": "<private-source>/Documents/ChatGPT/新世界/index_research/research-five-year/manifest.json",
+  "manifest_sha256": "6797b4f1ee9c4dc5bf23a03d1f84166b23871e7a71865e149ec9ad2a26761966",
+  "path": "<private-source>/Documents/ChatGPT/新世界/index_research/research-five-year/raw/tushare/7d79ffb8448819f68ae75524edfce55f8d56b94991f0b7276529e44eb06795c0.json",
+  "sha256": "5aeefff86b537d451674919e27f5026f86a805563ff28a2bc2af01a190adb6ab",
+  "used_start": "2019-12-02",
+  "used_end": "2025-12-31",
+  "used_rows": 1477,
+  "post_2025_rows_excluded_before_calculation": true
+}

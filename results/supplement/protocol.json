@@ -1,0 +1,29 @@
+{
+  "frozen_winner": "R001_100",
+  "capitals": [
+    100000,
+    200000,
+    300000,
+    500000,
+    1000000,
+    2000000,
+    5000000
+  ],
+  "cost_bps": 30,
+  "commission_bps": 2.5,
+  "minimum_commission": 5,
+  "buy_lot": 100,
+  "capital_reset": "each period starts in cash; no transfers or withdrawals afterwards",
+  "accounting": "adjusted units with automatic distribution reinvestment; full exit may include synthetic fractional claims",
+  "extension": "501-1000 exploratory only; excluded from original winner selection",
+  "periods": {
+    "TRAIN": [
+      "2015-01",
+      "2023-12"
+    ],
+    "TEST": [
+      "2024-01",
+      "2025-12"
+    ]
+  }
+}

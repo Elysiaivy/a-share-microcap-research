@@ -1,0 +1,124 @@
+{
+  "study": "A_share_point_in_time_size_gradient",
+  "train_start": "2015-01",
+  "train_end": "2023-12",
+  "test_start": "2024-01",
+  "test_end": "2025-12",
+  "initial_signal": "2014-12-31",
+  "universe": "historical Shanghai/Shenzhen mainboard, including former SME; exclude financials using contemporaneous evidence, CDR and listing age <252 sessions",
+  "min_listing_sessions": 252,
+  "buckets": {
+    "R001_100": [
+      1,
+      100
+    ],
+    "R101_200": [
+      101,
+      200
+    ],
+    "R201_300": [
+      201,
+      300
+    ],
+    "R301_400": [
+      301,
+      400
+    ],
+    "R401_500": [
+      401,
+      500
+    ]
+  },
+  "candidates": [
+    "R001_100",
+    "R101_200",
+    "R201_300",
+    "R301_400",
+    "R401_500"
+  ],
+  "reference": "R001_100",
+  "main_cost_bps": 30,
+  "cost_bps": [
+    10,
+    30,
+    50
+  ],
+  "hac_lags": 6,
+  "selection_metric": "sqrt(12)*monthly_net_mean/monthly_net_sample_std",
+  "return_convention": "prior-close planned adjusted share orders, opening fills subject to opening suspension and limit eligibility; only prior cash may fund buys, sale proceeds fund orders from next session; month-end net NAV",
+  "max_report_age_days": 240,
+  "limitations": [
+    "Daily-bar fills without queue, capacity or intraday matching",
+    "Actual next-session daily replacement is not an intraday immediate replacement",
+    "Historical point-in-time snapshots may contain vendor revisions",
+    "Early suspended-stock capitalization estimates affect ranks",
+    "No causal identification of shell value",
+    "Historical 2024-2025 holdout inspected before final rules"
+  ],
+  "security_aliases": [
+    {
+      "old": "000022.SZ",
+      "canonical": "001872.SZ",
+      "effective_date": "2018-12-26",
+      "source": "https://static.cninfo.com.cn/finalpage/2018-12-26/1205690369.PDF"
+    },
+    {
+      "old": "000043.SZ",
+      "canonical": "001914.SZ",
+      "effective_date": "2019-12-16",
+      "source": "https://www.szse.cn/disclosure/notice/general/t20191211_572534.html"
+    },
+    {
+      "old": "601313.SH",
+      "canonical": "601360.SH",
+      "effective_date": "2018-02-28",
+      "source": "https://static.cninfo.com.cn/finalpage/2018-04-04/1204585837.PDF"
+    }
+  ],
+  "repair_policy": {
+    "financial_snapshot_max_lag_sessions": 1,
+    "suspension_valuation": "verified_last_adjusted_quote_with_historical_shares_and_suspension_evidence",
+    "unresolved_terminal_policy": "documented delisting-date zero valuation; 50/100 percent last-quote sensitivities",
+    "no_future_backfill": true,
+    "status_snapshot_max_age_days": 185
+  },
+  "execution": "prior_close_orders_next_open_funded",
+  "terminal_fraction": 0.0,
+  "terminal_sensitivities": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "validation_disclosure": "2024-2025 historical holdout already inspected before final protocol update",
+  "st_policy": "Known-risk exclusion at monthly close; risk holdings submit exit orders at first subsequent open, sell proceeds fund preplanned forward replacement from the next session. Monthly rank list stays frozen.",
+  "delisting_trading_policy": "Names containing 退 identify publicly known delisting trading, never ordinary non-ST eligibility",
+  "selection_policy": "exclude_observable_risk_then_rank",
+  "intramonth_replacement": true,
+  "replacement_policy": "Prior-close candidate choice and fixed adjusted share quantity, funded only by prior available cash. No same-open reaction to another fill. Failed orders retry or advance only at the following planning close. Strategies independently use the monthly frozen rank list.",
+  "benchmark": {
+    "code": "000852.SH",
+    "name": "中证1000",
+    "return_type": "price_index"
+  },
+  "risk_free_rate_annual": 0.0,
+  "replacement_delay_sessions": 1,
+  "risk_exit_enabled": true,
+  "st_ablation_rules": {
+    "FILTER_ONLY": {
+      "risk_exit_enabled": false,
+      "intramonth_replacement": false
+    },
+    "EXIT_CASH": {
+      "risk_exit_enabled": true,
+      "intramonth_replacement": false
+    },
+    "EXIT_REPLACE": {
+      "risk_exit_enabled": true,
+      "intramonth_replacement": true
+    }
+  },
+  "protocol_version": "point_in_time_daily_orders_2026_10_22",
+  "buy_budget_policy": "Each order reserves quantity times the pre-open published upper-limit price plus cost; total reserved cash cannot exceed prior-close cash. Auction price savings are reused only at the next planning date.",
+  "historical_industry_policy": "Contemporaneous backup industry (same day or <=1 prior session), then already-published CSRC quarterly classification; no SW retrospective membership or future report-end company-type fallback.",
+  "input_gate_policy": "Preserve raw coverage gaps; require complete financial/capitalization inputs for observable nonrisk signal candidates. Stocks excluded by risk status already known on signal date cannot affect filtered rank."
+}

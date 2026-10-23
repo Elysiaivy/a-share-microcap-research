@@ -1,0 +1,20 @@
+{
+  "network_requests": 0,
+  "strategy_modified": false,
+  "parameter_search": false,
+  "style_source_period": "CSI300 cached monthly returns from 2020-01; lagged states from 2020-02",
+  "concentration_definition": "best 5 observed log returns replaced with zero, fixed original N; ex post diagnostic, not deployable strategy",
+  "checks": "annual compounding and exhaustive environment weighted means passed",
+  "inputs": {
+    "results/monthly.csv": "58969f7b614524769ba44088f4ac8cc80f163122d7950e6b7cf2113bf14aba07",
+    "results/performance.csv": "704e142cc37281b8e5564b9967761e8132533b8758e426a00f0ea13b7413e7df",
+    "results/supplement/extended_performance.csv": "6980aaf496ab1870db01368175198c9564ebae18d9e3b7803c1d3c68bf5f426a",
+    "results/cost_sensitivity.csv": "a0761652054a57b26102582d661d43e6c4344634cdfa93a3d5327d5cc5e1c72f",
+    "results/supplement/capital_performance.csv": "9dc183bda5d38e2334e92058209ed725090517b04288e8db91bce9aca4f4d00a",
+    "config.json": "5267e63bf272e8f09397ce3b774c5b36ff2561e7172a200d3b90aff29377bbeb",
+    "results/selection.json": "bc8868bdc686d06ddf1832c4418d6be048ad40d67939834a61cec5dac5c04f5d",
+    "results/applicability/csi300_monthly.csv": "e740f2a32a027e99bb6c57ba8de9bfe6d6f203878d04df9a35c11187bc697e41",
+    "results/applicability/csi300_source.json": "45af320f2eb80cee539072e576c5ba8dd0811f4d4f0e3d2e6b18e7f630b12488"
+  },
+  "script_sha256": "90683131b52fd062d2bcea6ab10c3ef94d4644166773398da8467c4346310f8d"
+}

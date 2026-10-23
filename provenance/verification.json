@@ -1,0 +1,40 @@
+{
+  "raw_inputs_verified": 12579,
+  "prepared_rows": 66000,
+  "signal_months": 132,
+  "train_months": 108,
+  "test_months": 24,
+  "winner": "R001_100",
+  "errors": [],
+  "notebook_execution": {
+    "code_cells": 20,
+    "errors": 0
+  },
+  "human_signoff": false,
+  "code_sha256": {
+    "microcap/__init__.py": "4a58607522cdc370e099770f465cadf8642f248cbc44b9eef271f2bba2afb485",
+    "microcap/__main__.py": "2cb08f1790b605f03ed2f985ccf2a8fb55c21d84f6d2024f0dab2e390316ae45",
+    "microcap/acquire.py": "bae51741c48d685e743be182c6a67844ef12b16575cb4d2a77403ac219db1db5",
+    "microcap/analysis.py": "6b47f3d1dabb8298b3aa37dac773b70dbfb424e1e9da547efd6dfee00681f3c1",
+    "microcap/audit.py": "96cce846549ce33d161e4627f610f07c644cc28af5e30edb21646f82938c9c09",
+    "microcap/benchmark.py": "6d681d707ed04b5c5fa857a40e32f3eb854844eb0854447e082dfbbbc9f2e68d",
+    "microcap/delisting_repair.py": "b084811d118ca7a052c744ca5b817dc9fa14b29750ea589b99c1c92eb688278b",
+    "microcap/diagnostics.py": "4ee7347d34404b72081e4a96df8024a5307c2a42dda4df326a333264d56de905",
+    "microcap/execution.py": "1e8cd8b6c8a86d4d6377ffca3def86bc890e734f528878bfc498db4a3fbb4931",
+    "microcap/execution_audit.py": "cbd71f0103d505964315e8c1832c8d941effd713deba4f30f452eadfe096fb3b",
+    "microcap/execution_constraints.py": "de1730b286b9fc2f99a4124827216a9542b93529d929ce1dd2215784b792ceec",
+    "microcap/features.py": "3ac45b31a2c41cba142b2060946dc775e7b849118f2dffea1a8ea4f00aacea5e",
+    "microcap/historical_status.py": "c94b9b8afb1f7b88958011664a17be0b0985acb19e11a67d9884330189ff63bd",
+    "microcap/industry_repair.py": "26d90eec7b419908e60015f1cb8634db3a5066264af3e92005c7e11ed1f6de42",
+    "microcap/portfolio.py": "cbbc1e73f300aa0a16c38499fa8fb91f17d68b978e924a1ee9a91af6929f07ff",
+    "microcap/prepare.py": "c9bac0ebb158d3612734b33454f1309361e72a7243820c761dcd0db3f10a6a8f",
+    "microcap/rank_uncertainty.py": "f06689083a72c026dfd503d6ca1612babb94f7c56cbbb683fac842ea2d02ebf7",
+    "microcap/repair.py": "c6e003871e41f43dae2a834ff461063a2a15bf72d38b55d6d23a2e1e387c53b2",
+    "microcap/report.py": "1b64a69f228c0a941839c1cc35dfe4b365a193b6ebd24a70607f39909ecf5611",
+    "microcap/research.py": "62379334fdda4abab33f61eb43de92fa88b247aa946b031675b7b24764e7f36c",
+    "microcap/selection.py": "3780166dd1dab8d063cad31b0c834d10303f0a68eeb1815baf04770bfd835098",
+    "microcap/supplement_notebook.py": "d59b5cdc1a4510a976483247ddc7608e1d3852f1a30821e42b2f221ac9b0f785",
+    "microcap/valuation_repair.py": "93ff1b5f9b3c75c0d1957fb42ecd5dde456672a27876fc419974f5a4fd8812bd",
+    "microcap/workflow.py": "96002d97d739ec6c75d8d1ef81160eb0e4b62a553c813d9259e4118c30662278"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "company_month_cases": 24,
+  "categories": {
+    "new_ST": 4,
+    "loss": 4,
+    "corporate_action": 4,
+    "suspension": 4,
+    "delisting": 4,
+    "ordinary": 4
+  },
+  "execution_cases": 31,
+  "execution_checks_pass": true,
+  "human_signoff": false,
+  "review_status": "source_records_reviewed_by_Codex_not_human_signoff"
+}

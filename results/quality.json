@@ -1,0 +1,22 @@
+{
+  "months": 132,
+  "train_months": 108,
+  "test_months": 24,
+  "complete_strategy_months": true,
+  "unverified_stale_holding_days": 0,
+  "ranking_missing": {
+    "n_nonfinance_mv_missing": 0,
+    "n_finance_unknown": 0
+  },
+  "ranking_missing_raw": {
+    "n_nonfinance_mv_missing_raw": 0,
+    "n_finance_unknown_raw": 105
+  },
+  "missing_inputs_excluded_by_signal_risk": {
+    "n_cap_missing_excluded_known_risk": 0,
+    "n_finance_unknown_excluded_known_risk": 105
+  },
+  "status_raw_top500_unknown_company_months": 0,
+  "estimated_capitalization_rows": 7879,
+  "publication_status": "conditional_research_estimates"
+}

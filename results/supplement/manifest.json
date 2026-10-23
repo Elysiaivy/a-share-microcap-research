@@ -1,0 +1,91 @@
+{
+  "protocol": {
+    "frozen_winner": "R001_100",
+    "capitals": [
+      100000,
+      200000,
+      300000,
+      500000,
+      1000000,
+      2000000,
+      5000000
+    ],
+    "cost_bps": 30,
+    "commission_bps": 2.5,
+    "minimum_commission": 5,
+    "buy_lot": 100,
+    "capital_reset": "each period starts in cash; no transfers or withdrawals afterwards",
+    "accounting": "adjusted units with automatic distribution reinvestment; full exit may include synthetic fractional claims",
+    "extension": "501-1000 exploratory only; excluded from original winner selection",
+    "periods": {
+      "TRAIN": [
+        "2015-01",
+        "2023-12"
+      ],
+      "TEST": [
+        "2024-01",
+        "2025-12"
+      ]
+    }
+  },
+  "sources": {
+    "config.json": "5267e63bf272e8f09397ce3b774c5b36ff2561e7172a200d3b90aff29377bbeb",
+    "results/selection.json": "bc8868bdc686d06ddf1832c4418d6be048ad40d67939834a61cec5dac5c04f5d",
+    "data/prepared/daily_market.npz": "cf0f78043659702ebe9f7badb0bf74ce50051849691b99cd2dba2b59f1d90d7e",
+    "data/prepared/selection_universe.csv": "eefbaf4776c0290b0ffa86e51e6b764d9b84e6b886511879d65ee2f1fdd210d5",
+    "data/prepared/panel.csv": "94966b9462727c159c6db1093b2000911ec287a949aae34105eeb47118e5b0f3",
+    "microcap/execution.py": "1e8cd8b6c8a86d4d6377ffca3def86bc890e734f528878bfc498db4a3fbb4931",
+    "microcap/execution_constraints.py": "de1730b286b9fc2f99a4124827216a9542b93529d929ce1dd2215784b792ceec",
+    "scripts/run_execution_sensitivity.py": "df13866246a6522f8f5f315bff6be3754d3a5cf5e470447a4c2a8d80d217c20d",
+    "data/repair_sources/extension/suspension_patch.json": "38ca15285d32d7757ce414bfde94aa9e78ee7ccf22a3249c9763774b552a4406"
+  },
+  "outputs": {
+    "results/supplement/trades_TEST_LOT_MIN5_200000.csv.gz": "bc47c6b2bbfbb0c1aa621ce37a778b932db300b288c9e9603bfd95ad9490a818",
+    "results/supplement/trades_TEST_LOT_1000000.csv.gz": "43566119e7fcdfe8ed22d6137fdc9c1d4cd09f03d8a10e24205b7b3ce0261122",
+    "results/supplement/trades_TRAIN_LOT_MIN5_1000000.csv.gz": "5d0dfecbb35dc88ec3fcc4640419477f9163de8d9df1c0a765ad21e3a19ff4f8",
+    "results/supplement/extended_performance.csv": "6980aaf496ab1870db01368175198c9564ebae18d9e3b7803c1d3c68bf5f426a",
+    "results/supplement/trades_TRAIN_LOT_200000.csv.gz": "0a9fa7b1175c201377ebb173bf200846204c265656e8cad1c5a9cd88d8f9b195",
+    "results/supplement/trades_TRAIN_LOT_MIN5_100000.csv.gz": "05004c9ea952992af7459ea727c4163563819e4e78ff5898f6ef9cc3a304be9f",
+    "results/supplement/trades_TEST_LOT_300000.csv.gz": "968c8584eacae5c665c360c6361490ff90ac3aa9d596eebfbb014437d14fe74f",
+    "results/supplement/trades_TEST_LOT_MIN5_5000000.csv.gz": "16009114bfce0d052710c3b027f27a37160cd4546d8d75c9de5ea9076d67e49b",
+    "results/supplement/trades_TEST_LOT_MIN5_2000000.csv.gz": "2a17cb38c1a409391c0b5b7eba97a6d38e42e423a0c62714ac08f52b3718a986",
+    "results/supplement/trades_TRAIN_LOT_1000000.csv.gz": "9a234bd6663a31f2dd497de848174b9d6af9daa25c7bf51adb6c367f24ac35b9",
+    "results/supplement/trades_TEST_LOT_500000.csv.gz": "8f8ef6afe44861a4f5bce31a402b104c36add708a56a0543a3bdafdb4a2106a2",
+    "results/supplement/trades_TRAIN_LOT_MIN5_200000.csv.gz": "2d4597d8e600629848021a3e3500690e6da37715811c3a8414370a2c5d72e931",
+    "results/supplement/capital_daily.csv.gz": "3d9ca639c1907ca5e136e734719c86b7c38f4bebe4c4698a9b3cb2e12cbe8f91",
+    "results/supplement/trades_TRAIN_LOT_100000.csv.gz": "c04aff04654e70f731e235dc5a74f8063fbc29493ca62317e5c545ba3bb2446e",
+    "results/supplement/capital_monthly.csv": "0c9199a2e7ca641130c71beebe54fce645f268658eecb63fca7371428db78537",
+    "results/supplement/extended_monthly.csv": "9979d2bbdfbff198d1736c75cd52a486bd9c634b340ff52987528700f808929f",
+    "results/supplement/trades_TEST_LOT_MIN5_100000.csv.gz": "6a5b35ce9a019ae9c600757b47079180aba0241b56b084e9c426a936b9af5d88",
+    "results/supplement/extended_events_diagnostic.csv": "55fa17ad383d0a363cbd6b4c7504dd9d1b5aece572b83dbb82ae5b58d0d56377",
+    "results/supplement/capital_performance.csv": "9dc183bda5d38e2334e92058209ed725090517b04288e8db91bce9aca4f4d00a",
+    "results/supplement/trades_TRAIN_LOT_MIN5_500000.csv.gz": "b27d12abd6100fdf7b47433f8f6ce16127658c07f6f104e12f1b6b7a0cfc5436",
+    "results/supplement/extended_daily_nav.csv.gz": "3c6e66a64ead8ef55f80eb1abcd0648b20cb708ac209303b04b2d3155a895623",
+    "results/supplement/trades_TRAIN_LOT_300000.csv.gz": "d53b745c5213a395c2661a1d619698637b481ca0eb171320e1574432dd381ee1",
+    "results/supplement/trades_TEST_LOT_200000.csv.gz": "0d0235e81316693e36879ba5720af41f71e69c0acfe5d87a3a6dc4c5774419a0",
+    "results/supplement/protocol.json": "eaea59c58292aff4fc6151bac760d720479927a102bf926ded9a85ddca5e0e5b",
+    "results/supplement/trades_TEST_LOT_MIN5_300000.csv.gz": "e44e64075b6131d58d46734c20ca4e15ea9d847f0c07f5bbf2a4af2618d0da68",
+    "results/supplement/trades_TRAIN_LOT_MIN5_2000000.csv.gz": "5f96ff062d4c5756677776354e23bd8835241f54e0d7039211fde9a7639ca452",
+    "results/supplement/trades_TRAIN_LOT_MIN5_5000000.csv.gz": "1e89075fbb3c30f8fda5f8201f6ea50aba50271d036ba4f043af474414eb9582",
+    "results/supplement/extended_holdings.csv.gz": "f23301a5c3f916aae03e7936fd80c15f612644bf2f32135cf6ebd0ca6912505c",
+    "results/supplement/trades_TEST_LOT_5000000.csv.gz": "c246c8cf89921a82467990b4654c48d71623455e464ba950f54d1a5204044a6b",
+    "results/supplement/trades_TEST_LOT_2000000.csv.gz": "165584312cacc659f5b0d42f5a17bf67185e2306358072fc9d021e12d1c615f3",
+    "results/supplement/trades_TRAIN_LOT_MIN5_300000.csv.gz": "7549e909bebf408047bbd9ed405780e2a9908e64e33c700134b136cb55bf92ce",
+    "results/supplement/trades_TEST_LOT_100000.csv.gz": "4903b6126b389b9ccd967466594be85576d384f2f054d9ebd13d7b9a7641ee1e",
+    "results/supplement/extended_events.csv.gz": "e77fae5e79e11bc7596edea85521edfece39b0635fa3cdefc3676c43224833d8",
+    "results/supplement/trades_TEST_LOT_MIN5_1000000.csv.gz": "7d16161bdb4a0d4a2d9ec366f6ba92614c528ba9d9386cba6b525f1d53663250",
+    "results/supplement/trades_TRAIN_LOT_500000.csv.gz": "293f6082e978d6e9da4cb6d225440f786546d1ef231b5c841af1823520963cd4",
+    "results/supplement/trades_TRAIN_LOT_5000000.csv.gz": "a3de6dd8879452cda6d731a78a9f2570e38176f11034b1dbc09c5dbe2866e89e",
+    "results/supplement/trades_TEST_LOT_MIN5_500000.csv.gz": "cb93238feb263d9208ddaf8a91a77a9b94bd43d1ef82cb7f62e7730906d4beed",
+    "results/supplement/trades_TRAIN_LOT_2000000.csv.gz": "be8768d3f1acd3a37813e0139d6c6c2bdee1d1456fa3a5281a44d4b4902abee1",
+    "results/supplement/capital_checks.csv": "67027b56b5837eee7ad60ff4f74d28a0629d656bfbcfad880cf78eb418194ef5"
+  },
+  "checks": {
+    "frozen_selection_unchanged": true,
+    "config_unchanged": true,
+    "baseline_training_reproduced": true,
+    "missing_holding_marks": 0,
+    "extended_months": 132,
+    "extended_target_stocks_per_month": 500
+  }
+}
