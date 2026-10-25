@@ -83,6 +83,10 @@ if __name__ == '__main__':
     parser.add_argument('--manifest',action='store_true')
     args = parser.parse_args()
     result = verify_results()
+    from scripts.verify_capacity import verify_capacity
+    result['capacity'] = verify_capacity(ROOT)
+    from scripts.verify_capacity_risk import verify_capacity_risk
+    result['capacity_risk'] = verify_capacity_risk(ROOT)
     if args.manifest:
         result['public_files_verified'] = verify_manifest()
     print(json.dumps(result,ensure_ascii=False,indent=2))

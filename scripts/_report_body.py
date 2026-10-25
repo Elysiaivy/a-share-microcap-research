@@ -115,7 +115,7 @@ CI=next(x for x in PAIR if x['strategy']==WIN and x['comparator']=='CSI1000' and
 # 1 Summary
 p('A股小市值策略的收益延续性\n与执行约束').style='Title'
 p('2015至2025年沪深主板市值分组研究').style='Subtitle'
-note('2026年10月23日  |  样本内2015—2023  |  历史留出2024—2025  |  单边综合成本30bp')
+note('2026年10月25日  |  样本内2015—2023  |  历史留出2024—2025  |  单边综合成本30bp')
 h('研究问题')
 p('在剔除当时已知ST等风险状态后，较小市值股票的收益优势能否延续？如果以100只股票为月度目标，这种优势需要承担多大回撤，又会受到整手交易和最低佣金怎样的影响？')
 h('主要结论')
@@ -277,6 +277,6 @@ for run in doc.element.iter(qn('w:r')):
 doc.save(OUT)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 inputs=['config.json','README.md','results/selection.json','results/performance.csv','results/monthly.csv','results/daily_nav.csv','results/paired_tests.json','results/cost_sensitivity.csv','results/terminal_sensitivity.csv','results/st_ablation_performance.csv','results/st_ablation_tests.csv','results/regression_summary.csv','results/regression_coverage.csv','results/verification.json','scripts/_report_body.py','scripts/build_word_figures.py','results/supplement/manifest.json','results/supplement/capital_performance.csv','results/supplement/extended_performance.csv']
-manifest=dict(report_date='2026-10-23',selection_winner=WIN,cost_bps=30,source_inputs=[dict(path=x,sha256=sha(ROOT/x)) for x in inputs],output=dict(path=str(OUT.relative_to(ROOT)),sha256=sha(OUT)),figures=[dict(path=str((F/(name+'.png')).relative_to(ROOT)),sha256=sha(F/(name+'.png'))) for name in used_figures],validation=dict(training_scores_recomputed=True,existing_release_errors=VERIFY['errors'],render_review='pending',tables=len(doc.tables),figures=len(doc.inline_shapes)))
+manifest=dict(report_date='2026-10-25',selection_winner=WIN,cost_bps=30,source_inputs=[dict(path=x,sha256=sha(ROOT/x)) for x in inputs],output=dict(path=str(OUT.relative_to(ROOT)),sha256=sha(OUT)),figures=[dict(path=str((F/(name+'.png')).relative_to(ROOT)),sha256=sha(F/(name+'.png'))) for name in used_figures],validation=dict(training_scores_recomputed=True,existing_release_errors=VERIFY['errors'],render_review='pending',tables=len(doc.tables),figures=len(doc.inline_shapes)))
 (R/'word_report_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
 print(OUT);print('Tables',len(doc.tables),'figures',len(doc.inline_shapes))

@@ -1,0 +1,3 @@
+period,scenario,initial_capital,date,stock_code,terminal_marked_value_yuan,terminal_residual_yuan,terminal_writeoff_yuan
+TEST,MAIN_1P,1000000,2024-06-27,600321.SH,3950.0000000000005,0.0,3950.0000000000005
+TEST,MAIN_1P,50000000,2024-06-27,600321.SH,168450.00000000006,0.0,168450.00000000006

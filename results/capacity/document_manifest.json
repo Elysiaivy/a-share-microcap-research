@@ -1,0 +1,39 @@
+{
+  "base_sha256": "be3a50b6eb14c50fcaae6efc09682443da7f59dbf57993031c161a963aad1036",
+  "output_sha256": "9ae2dd7981daca1069362e8bb05ee6920b63aa481297f8c6606b4499e2492147",
+  "capacity_run_id": "e247a5fcac10ad8b03be27b825421817203d402c119c94d2d7584db06d32219e",
+  "full_predeclared_grid": true,
+  "inserted_sections": [
+    12,
+    13,
+    14
+  ],
+  "conclusion_section": 15,
+  "new_tables": [
+    17,
+    18,
+    19,
+    20
+  ],
+  "new_figures": [
+    7
+  ],
+  "render_review": {
+    "status": "passed",
+    "date": "2026-10-25",
+    "pages": 18,
+    "scope": "All-page visual layout review; capacity pages and terminal-risk note inspected at full resolution. Chinese fonts and full capacity figure verified.",
+    "pdf_path": "docs/research_report.pdf",
+    "pdf_sha256": "0021fe9b3ec4db29031ed73ab41869d24d3a2c2a88200bd708a1c15728bf94bc"
+  },
+  "sources": {
+    "protocol.json": "bda51af7e6541b6b93d0a2c7841f0ae06a377a01e58f1b92df5fd369133e7dde",
+    "performance.csv": "911a14f30323dfa42800dea933560ce9994c253970354374948ff327403b6a0a",
+    "performance_differences.csv": "0bd85beb9ff709c5b26f8498b98355b69a929a65fb62c8bd6871c2f0614b6f12",
+    "attempt_summary.csv": "219331729c9255e5bb9faf114627b8ca0c1c85e54b740d6bc5b58dc155f30843",
+    "constraint_summary.csv": "98494f1942500210a8d80b9ef9f7c03d4106ce7596b65356f2755c4d04c5e9a6",
+    "coverage.json": "bd73753d1b1f2440ac311b8a5d691e6b4ea57bcc30cba566c1ec0b43e478fbaa",
+    "manifest.json": "a75655c6e2b3247b37ded8967e9c2f3f6105f25147b9603969b050c5301b23fc"
+  },
+  "figure_sha256": "74e366abb2867c68c642f6ba87bb2b6241c67156b9c3594b58bf8d4e08ca3bbc"
+}

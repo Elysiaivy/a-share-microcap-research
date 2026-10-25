@@ -24,6 +24,7 @@ Windows激活命令：`.venv\Scripts\activate`。使用Python 3.13，主要依�
 ```bash
 python scripts/analyze_applicability.py
 python scripts/build_word_figures.py
+python scripts/build_capacity_figures.py
 python scripts/build_word_report.py
 python scripts/build_site_figures.py
 python scripts/build_site.py
@@ -75,11 +76,44 @@ python scripts/run_execution_sensitivity.py
 
 ## 4 版本与结论边界
 
-- `config.json`、冻结赢家和原始收益表保持原研究内容；发布修改集中在路径、复现和展示。
+- `config.json`、冻结赢家和原始收益表保持原研究内容；新增容量实验单独保存，不用它重新挑选赢家。
 - `provenance/`及结果目录中的历史运行清单是原完整数据环境的证据，不是公开包完整性的校验入口。脱敏路径会改变相应清单文件自身的哈希；原始数据内容哈希仍保留。
 - 执行与样本外假设见DATA_CONTRACT.md。2024—2025曾被查看，不能称为全新独立验证。
-- 测试与结果核对通过，不等于从原始数据重跑通过。本次发布未重跑完整行情回测。
+- 公开Notebook重算已保存的结果；本次容量层另在授权完整数据环境重跑固定赢家的128格执行情景。它不等于重新认证五档全部输入、财报历史版本或实盘成交。
 
 ## 5 发布维护
 
 GitHub Pages从`main`分支的`docs/`发布。提交前运行验证、测试、Notebook；报告改动须重新导出PDF并检查。重建网页与公开清单后提交。GitHub Actions重复运行测试和公开结果复算，下载后的原始Notebook也接受文件校验；运行时产生的缓存和数据不入库。
+
+## 6 成交容量与市场冲击压力测试
+
+新增实验固定原赢家，使用单独的日频VWAP成交代理，比较8个资金起点与8种执行情景，并在样本内、历史留出期分别从现金开户。**没有用新结果重新选组，也没有替换原主回测。** `results/capacity/`包含预先冻结的协议、128格绩效、月度收益、日度组合净值、逐日委托尝试汇总、约束原因及四阶段差额。
+
+公开结果可离线复核：
+
+```bash
+python scripts/verify_capacity.py
+python scripts/verify_capacity_risk.py
+python scripts/build_capacity_figures.py
+python scripts/execute_notebook.py
+```
+
+`verify_public.py`同时调用容量核验；核对网格、源代码与结果哈希、逐月复利、日度回撤、冲击费用、完成率，以及开盘对照与既有资金实验的重合部分。逐笔原始行情与完整委托账本不公开；不能仅凭公开统计认证历史真实成交。
+
+有完整且授权的原数据环境时，可使用以下入口复跑（替换示例路径）：
+
+```bash
+# TUSHARE_TOKEN仅从本地环境读取；不要把凭据写进命令、代码或Git。
+python scripts/prepare_capacity_inputs.py --data-root /path/to/full/project
+python scripts/prepare_capacity_inputs.py --data-root /path/to/full/project --offline
+python scripts/run_capacity_stress.py --data-root /path/to/full/project --workers 2
+python scripts/analyze_capacity_risk.py
+python scripts/verify_capacity.py
+python scripts/verify_capacity_risk.py
+```
+
+补录数据写入外部项目的`data/capacity/`，不会覆盖原始行情；逐日响应可断点续传，默认每分钟最多48个请求；若传入`--interval 0.35`，程序先实时核实daily_basic标准权限，再按官方200次/分钟档位留余量运行（最多约172次/分钟），权限或频率拒绝时立即停止。新旧开盘价、收盘价或成交额不一致会阻止构建，不能把不同供应商版本直接混用。日成交额／成交量隐含价格超出当日高低价容差时保留证据，该股票当日新增成交量设为缺失并阻止新场景成交；不裁剪价格。停牌仅在有明确全天停牌证据时把缺失成交额记为0，其他未知值维持缺失。覆盖信息复制到公开`coverage.json`。
+
+完整运行的逐笔账本存于`.build/capacity_runs/`，默认不进入Git；不完整的试跑只写私有pilot目录，不能覆盖公开全网格。运行前后会核对输入和代码哈希。重建报告需先生成容量图，再运行统一Word入口并导出PDF；公开统计、网页、Notebook和报告使用同一组结果表。
+
+风险诊断从对应run_id的事件账本读取并逐份校验哈希，另行公开128格终止记账统计及少量案例。`verify_capacity_risk.py`仅使用公开文件，核对来源绑定、事件次数与账面恒等式；不会读取未公开账本。期末没有待退出ST，可能是按既定残值终止记账，不能视作已全部卖出。

@@ -1,0 +1,16 @@
+{
+  "capacity_run_id": "e247a5fcac10ad8b03be27b825421817203d402c119c94d2d7584db06d32219e",
+  "full_predeclared_grid": true,
+  "sources": {
+    "protocol.json": "bda51af7e6541b6b93d0a2c7841f0ae06a377a01e58f1b92df5fd369133e7dde",
+    "manifest.json": "a75655c6e2b3247b37ded8967e9c2f3f6105f25147b9603969b050c5301b23fc",
+    "performance.csv": "911a14f30323dfa42800dea933560ce9994c253970354374948ff327403b6a0a",
+    "performance_differences.csv": "0bd85beb9ff709c5b26f8498b98355b69a929a65fb62c8bd6871c2f0614b6f12"
+  },
+  "outputs": {
+    "capacity_stress.png": "74e366abb2867c68c642f6ba87bb2b6241c67156b9c3594b58bf8d4e08ca3bbc",
+    "capacity_stress.svg": "b53be37e2d62b0139b5795db7328b966ddc244bf941631ccb9ebf17e8a0dbce4",
+    "capacity_decomposition.png": "c5bf2ce10f14b2b29de0a0e5bed1dfa87c680580ee419f04ee000c9cd31c2af9",
+    "capacity_decomposition.svg": "3241fb9996213313c6ea05383a3c4c3e2a585863de1ba73783dbe38bfbf11efc"
+  }
+}

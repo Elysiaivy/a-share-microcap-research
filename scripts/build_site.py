@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import shutil
+import sys
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,9 +24,16 @@ EXITS = EXITS[EXITS.strategy.eq(W)]
 PAIR = next(x for x in json.loads((ROOT / 'results/paired_tests.json').read_text())['comparisons']
             if x['strategy'] == W and x['comparator'] == 'CSI1000' and x['period'] == 'TEST')
 REPO = 'https://github.com/Elysiaivy/a-share-microcap-research'
+sys.path.insert(0, str(ROOT / 'scripts'))
+from _report_capacity import load_capacity, number
+
+# Only the completed, checksum-matched stress grid can enter the public page.
+LIQ = load_capacity(ROOT)
 
 for name in ['nav_periods', 'test_drawdown', 'paired_intervals', 'extended_bands', 'capital_sensitivity']:
     shutil.copy2(ROOT / 'results/word_figures' / f'{name}.png', ASSETS / f'{name}.png')
+for name in ['capacity_stress', 'capacity_decomposition']:
+    shutil.copy2(ROOT / 'results/word_figures' / f'{name}.svg', ASSETS / f'{name}.svg')
 
 def performance(strategy, period='TEST'):
     return P[P.strategy.eq(strategy) & P.period.eq(period) & P.cost_bps.eq(30)].iloc[0]
@@ -58,6 +66,35 @@ def annual_rows():
     return ''.join(f'<tr><th scope="row">{year}</th><td>{q[W]:.2%}</td><td>{q.CSI1000:.2%}</td></tr>'
                    for year, q in ANNUAL.iterrows())
 
+def liquidity(amount, scenario='MAIN_1P', period='TEST'):
+    return LIQ['indexed'][(period, scenario, amount)]
+
+def capacity_stress_rows():
+    out = []
+    for amount in sorted(LIQ['protocol']['capitals_yuan']):
+        row, base = liquidity(amount), liquidity(amount, 'OPEN_BASE')
+        delta = number(row, 'cagr') - number(base, 'cagr')
+        out.append(f'<tr><th scope="row">{amount / 10000:,.0f}万元</th>'
+                   f'<td>{number(row, "cagr"):.2%}</td><td>{delta * 100:+.2f}</td>'
+                   f'<td>{number(row, "sharpe"):.3f}</td>'
+                   f'<td>{number(row, "daily_max_drawdown"):.2%}</td>'
+                   f'<td>{number(row, "mean_cash"):.2%}</td>'
+                   f'<td>{number(row, "attempt_completion"):.2%}</td></tr>')
+    return ''.join(out)
+
+def capacity_comparison_rows():
+    out = []
+    for scenario, reference, label in [
+        ('VWAP_BASE', 'OPEN_BASE', '参考价与成交资格'),
+        ('CAP_1P', 'VWAP_BASE', '容量上限与延迟'),
+        ('CAP_1P_SIGMA', 'CAP_1P', '波动率数据覆盖'),
+        ('MAIN_1P', 'CAP_1P_SIGMA', '额外冲击与持仓路径'),
+    ]:
+        cells = ''.join(f'<td>{(number(liquidity(amount, scenario), "cagr") - number(liquidity(amount, reference), "cagr")) * 100:+.2f}</td>'
+                        for amount in [1000000, 10000000, 50000000])
+        out.append(f'<tr><th scope="row">{label}</th>{cells}</tr>')
+    return ''.join(out)
+
 q, benchmark, train = performance(W), performance('CSI1000'), performance(W, 'TRAIN')
 values = {
     'STYLE_VERSION': hashlib.sha256((ASSETS / 'style.css').read_bytes()).hexdigest()[:12],
@@ -76,12 +113,24 @@ values = {
     'CAPBASE': f'{capital(1, "CONTINUOUS").cagr:.2%}',
     'EXITS': str(len(EXITS)), 'DELAYED': str(int(EXITS.delay_sessions.gt(0).sum())),
     'MAX_DELAY': str(int(EXITS.delay_sessions.max())),
+    'CAPACITY_ROWS': capacity_stress_rows(), 'CAPACITY_COMPARISONS': capacity_comparison_rows(),
+    'LIQ100_CAGR': f'{number(liquidity(1000000), "cagr"):.2%}',
+    'LIQ100_COMPLETION': f'{number(liquidity(1000000), "attempt_completion"):.2%}',
+    'LIQ100_DELTA': f'{(number(liquidity(1000000), "cagr") - number(liquidity(1000000, "OPEN_BASE"), "cagr")) * 100:+.2f}',
+    'LIQ5000_CAGR': f'{number(liquidity(50000000), "cagr"):.2%}',
+    'LIQ5000_COMPLETION': f'{number(liquidity(50000000), "attempt_completion"):.2%}',
+    'LIQ100_MAXNAV': f'{number(liquidity(1000000), "max_nav_yuan") / 10000:,.1f}',
+    'LIQ5000_MAXNAV': f'{number(liquidity(50000000), "max_nav_yuan") / 10000:,.1f}',
+    'LIQ100_SHORTFALL': f'{number(liquidity(1000000), "month_end_mean_target_shortfall_weight"):.2%}',
+    'LIQ5000_SHORTFALL': f'{number(liquidity(50000000), "month_end_mean_target_shortfall_weight"):.2%}',
+    'LIQ100_WRITEOFF': f'{number(LIQ["risk_index"][("TEST","MAIN_1P",1000000)], "terminal_writeoff_yuan"):,.0f}',
+    'LIQ5000_WRITEOFF': f'{number(LIQ["risk_index"][("TEST","MAIN_1P",50000000)], "terminal_writeoff_yuan"):,.0f}',
 }
 page = '''<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="A股小市值策略研究：2024—2025历史留出年化23.42%、日度最大回撤45.16%。比较中证1000，检验ST退出、整手与最低佣金的执行代价。报告、Notebook与代码可查。">
+<meta name="description" content="A股小市值策略研究：比较历史收益、回撤与中证1000，检验ST退出、整手与最低佣金，并测试10万至5000万元的日频成交容量与额外冲击情景。报告、Notebook与代码可查。">
 <meta name="theme-color" content="#102b50">
 <title>A股小市值策略 · 收益、风险与执行 | Elysiaivy</title>
 <link rel="stylesheet" href="assets/style.css?v=@@STYLE_VERSION@@">
@@ -99,7 +148,7 @@ page = '''<!doctype html>
 <div class="hero-inner">
 <div class="hero-copy"><p class="eyebrow">A-SHARE EQUITY RESEARCH <span>/</span> 中国A股 · 2015—2025</p>
 <h1 id="project-title">A股小市值策略<br><span>收益延续与执行约束</span></h1>
-<p class="lead">按历史总市值筛选小市值股票，用固定规则检验收益，再把ST退出、整手与最低佣金纳入执行评估。</p>
+<p class="lead">按历史总市值筛选小市值股票，用固定规则检验收益，再评估ST退出、整手交易、资金规模与成交冲击的影响。</p>
 <div class="actions"><a class="button" href="#results">查看收益与风险 <span aria-hidden="true">↓</span></a><a class="outline-button" href="research_report.pdf">阅读完整报告 <span aria-hidden="true">↗</span></a></div>
 </div>
 <aside class="verdict" aria-label="研究结论摘要"><p class="eyebrow">研究结论 / AT A GLANCE</p>
@@ -137,14 +186,27 @@ page = '''<!doctype html>
 </section>
 
 <section class="section" id="execution">
-<div class="section-heading"><div><p class="eyebrow">02 / 现实执行条件</p><h2>从理论持仓，到资金实际能买到什么</h2></div><p>已评估交易约束的代价。<br>仍需验证容量、冲击与真实账户账本。</p></div>
-<div class="execution-intro"><p>100万元的整手＋最低佣金情景，年化收益为<strong>@@CAP100@@</strong>，平均现金占比为<strong>@@CASH100@@</strong>。小资金更难接近100只股票的分散持仓，现金闲置会改变收益与回撤。</p><span class="status-label">执行模拟 · 非最低入场资金建议</span></div>
-<div class="table-wrap"><table><caption>2024—2025资金敏感性 · 各情景均从现金建仓</caption><thead><tr><th scope="col">期初资金 / 情景</th><th scope="col">年化收益</th><th scope="col">日度最大回撤</th><th scope="col">平均现金</th><th scope="col">平均持股数</th></tr></thead><tbody>@@CAPITAL_ROWS@@</tbody></table></div>
-<p class="note">100股买入整手；单笔综合费用＝27.5bp成交额＋max(2.5bp成交额，5元)，是研究假设。平均持股数可能因待售旧仓与补仓重叠而略超100只；连续份额为无整手、无最低佣金的同起点对照。</p>
-<div class="disclosure"><strong>比较口径：</strong>@@CAP100@@应与同现金起点的@@CAPBASE@@比较；首页@@CAGR@@承接旧持仓。小资金回撤较低同时伴随更高现金占比，不能直接解释成策略风控改善。本实验未测出资金容量上限。</div>
-<div class="execution-evidence"><article><p class="eyebrow">ST退出的实际障碍</p><h3>知道风险，不等于当日能卖出</h3><div class="exit-number"><strong>@@DELAYED@@ <span>/ @@EXITS@@</span></strong><small>全样本最小组风险退出成交中出现延迟</small></div><p>最长列示案例延迟@@MAX_DELAY@@个交易日。三种ST规则在留出期的最大回撤均约45.16%，退出规则没有消除组合的大幅下跌。</p></article>
-<div class="evidence-list"><h3>可行性验证到哪一步？</h3><div><span class="evidence-state">已模拟</span><p>次日开盘、停牌与限价约束、现金预算、风险退出与递延补仓、整手和最低佣金。</p></div><div><span class="evidence-state pending">待验证</span><p>订单参与率、集合竞价容量、成交队列、动态冲击成本，以及真实股数和分红到账的账户账本。</p></div><div><span class="evidence-state pending">尚无记录</span><p>冻结规则后逐日留痕的前向模拟或实盘业绩。当前不能据回测认定可复制执行。</p></div></div></div>
-<details class="detail-block"><summary>查看全部资金档位与执行口径</summary><div class="detail-content"><figure><img loading="lazy" src="assets/capital_sensitivity.png" alt="10万至500万元各资金档位，比较仅整手、整手加最低佣金和连续份额的年化收益"><figcaption>两段各自从现金开始；当前以复权权益模拟财富变化，尚非按未复权整数股数、现金分红到账逐笔核对的券商账户。</figcaption></figure><p class="note"><a href="@@REPO@@/blob/main/results/supplement/capital_performance.csv">下载资金实验完整结果</a> · <a href="@@REPO@@/blob/main/DATA_CONTRACT.md">交易与数据口径</a></p></div></details>
+<div class="section-heading"><div><p class="eyebrow">02 / 现实执行条件</p><h2>资金放大后，订单能完成多少？</h2></div><p>同时看净收益、未完成订单与现金。<br>日频压力情景仍需真实成交证据验证。</p></div>
+<div class="execution-intro"><p>在1%参与率上限与额外冲击主情景下，100万元起步的留出期年化为<strong>@@LIQ100_CAGR@@</strong>，相对同资金开盘对照变化<strong>@@LIQ100_DELTA@@个百分点</strong>；逐日尝试金额完成率为<strong>@@LIQ100_COMPLETION@@</strong>。5000万元起步对应年化<strong>@@LIQ5000_CAGR@@</strong>、完成率<strong>@@LIQ5000_COMPLETION@@</strong>。</p><span class="status-label">日频成交压力测试<br>非实测容量或资金建议</span></div>
+<figure class="chart-main"><div class="figure-title"><h3>资金规模、净收益与成交完成率</h3><span>2024.01—2025.12 · 各情景现金起步</span></div><img loading="lazy" src="assets/capacity_stress.svg" alt="不同期初资金下，0.5%、1%和5%参与率压力情景的年化收益与逐日尝试金额完成率；年化收益另列原开盘执行对照"><figcaption>资金规模是期初资金，期间按净值复利变化。参与率限制买卖合计成交额；未成交部分递延，ST部分退出继续补同一个替代仓位。</figcaption></figure>
+<div class="table-wrap"><table><caption>1%参与率主情景 · 30bp基础费用＋额外冲击 · 2024—2025</caption><thead><tr><th scope="col">期初资金</th><th scope="col">年化收益</th><th scope="col">较开盘对照<br>百分点</th><th scope="col">夏普</th><th scope="col">日度最大回撤</th><th scope="col">平均现金</th><th scope="col">尝试金额<br>完成率</th></tr></thead><tbody>@@CAPACITY_ROWS@@</tbody></table></div>
+<p class="note">夏普使用月收益、无风险率0。完成率＝全部逐日订单尝试的已成交金额／计划金额，金额均按前收盘价计；重试会再次进入分母，不是每个原始订单最终完成的比例。完整结果另列ST退出延迟、期末未退出风险仓位与目标持仓缺口。窄屏可横向滚动表格。</p>
+<p class="note">月末普通目标缺口占净值的平均值：100万元为@@LIQ100_SHORTFALL@@，5000万元为@@LIQ5000_SHORTFALL@@。ST顺延补仓的待用预算另行统计，不包含在这个普通目标缺口中。</p>
+<div class="disclosure"><strong>情景如何定义：</strong>日成交价格采用全天VWAP代理；每只股票每日买卖共享额度为“前20日平均成交额×1%”与“当日成交额×1%”两者较小值。计划只使用此前信息，当日成交额只限制成交。额外冲击使用未校准的平方根模型（系数0.5），在原30bp和最低佣金之上另扣，代表流动性恶化压力；不是实测总成本，也不能证明原开盘订单可成交。</div>
+<details class="detail-block"><summary>收益差异来自哪里？查看四步对照与完整情景</summary><div class="detail-content">
+<div class="table-wrap"><table><caption>依次改变一层假设 · 留出期年化收益差（百分点）</caption><thead><tr><th scope="col">该步变化</th><th scope="col">100万元</th><th scope="col">1000万元</th><th scope="col">5000万元</th></tr></thead><tbody>@@CAPACITY_COMPARISONS@@</tbody></table></div>
+<p class="note">先由原开盘改为日频VWAP参照及更严格成交资格，再加容量上限，再要求相同波动率覆盖，最后增加冲击成本。第四步同时改变现金与后续持仓，不能把全部收益差当作手续费；限制更紧也不保证收益严格下降。</p>
+<figure><img loading="lazy" src="assets/capacity_decomposition.svg" alt="样本内与历史留出期的四步年化差额：参考价和成交资格、容量上限、波动率覆盖、额外冲击和持仓路径"><figcaption>两个时期各自从现金开始，不重选赢家。公开全部8种情景×8档资金×2个时期，共128组结果，包括0.5%／5%参与率与更高冲击敏感性。</figcaption></figure>
+<p class="note">100万元与5000万元主情景在留出期的最高净值金额分别为@@LIQ100_MAXNAV@@万元、@@LIQ5000_MAXNAV@@万元；不能把期初资金误作恒定管理规模。<a href="@@REPO@@/blob/main/results/capacity/performance.csv">完整容量绩效</a> · <a href="@@REPO@@/blob/main/results/capacity/constraint_summary.csv">未成交约束统计</a> · <a href="@@REPO@@/blob/main/results/capacity/protocol.json">冻结实验协议</a></p>
+<p class="note">期末待售ST为0，不等于全部卖出。600321.SH在模型中于2024-06-27按零残值终止记账；100万／5000万元主情景分别冲销最后账面值@@LIQ100_WRITEOFF@@／@@LIQ5000_WRITEOFF@@元，未收到卖出回款。该数值不等于总投资损失。<a href="@@REPO@@/blob/main/results/capacity/terminal_cases.csv">查看核验案例</a></p>
+</div></details>
+<details class="detail-block"><summary>小资金的问题：整手与最低佣金造成多少偏差？</summary><div class="detail-content">
+<div class="table-wrap"><table><caption>原开盘执行下的资金敏感性 · 2024—2025，各情景从现金建仓</caption><thead><tr><th scope="col">期初资金 / 情景</th><th scope="col">年化收益</th><th scope="col">日度最大回撤</th><th scope="col">平均现金</th><th scope="col">平均持股数</th></tr></thead><tbody>@@CAPITAL_ROWS@@</tbody></table></div>
+<p class="note">100万元整手＋最低佣金情景年化@@CAP100@@，平均现金@@CASH100@@。100股买入整手；单笔基础综合费用＝27.5bp成交额＋max(2.5bp成交额，5元)，是研究假设。平均持股数可能因待售旧仓与补仓重叠而略超100只；连续份额为无整手、无最低佣金的同起点对照。</p>
+<div class="disclosure"><strong>比较口径：</strong>@@CAP100@@应与同现金起点的@@CAPBASE@@比较；首页@@CAGR@@承接旧持仓。小资金回撤较低同时伴随更高现金占比，不能直接解释成策略风控改善。容量主情景在这些约束之上，再引入日频成交限制与额外冲击。</div>
+<figure><img loading="lazy" src="assets/capital_sensitivity.png" alt="原开盘执行下10万至500万元资金档位，比较仅整手、整手加最低佣金和连续份额的年化收益"><figcaption>两段各自从现金开始；当前以复权权益模拟财富变化，尚非按未复权整数股数、现金分红到账逐笔核对的券商账户。</figcaption></figure><p class="note"><a href="@@REPO@@/blob/main/results/supplement/capital_performance.csv">下载整手与佣金实验完整结果</a> · <a href="@@REPO@@/blob/main/DATA_CONTRACT.md">交易与数据口径</a></p></div></details>
+<div class="execution-evidence"><article><p class="eyebrow">ST退出的实际障碍</p><h3>知道风险，不等于当日能卖出</h3><div class="exit-number"><strong>@@DELAYED@@ <span>/ @@EXITS@@</span></strong><small>原主回测 · 全样本风险退出成交中出现延迟</small></div><p>原主回测最长列示案例延迟@@MAX_DELAY@@个交易日。三种ST规则在留出期的最大回撤均约45.16%，退出规则没有消除组合的大幅下跌。</p></article>
+<div class="evidence-list"><h3>可行性验证到哪一步？</h3><div><span class="evidence-state">已模拟</span><p>停牌与限价、现金预算、风险退出及递延补仓、整手与最低佣金；另有日频参与率上限、部分成交和额外冲击压力测试。</p></div><div><span class="evidence-state pending">待验证</span><p>分钟与集合竞价容量、排队成交、买卖价差、实测冲击系数，以及真实股数和分红到账的账户账本。当前模型不能认证资金容量上限。</p></div><div><span class="evidence-state pending">尚无记录</span><p>冻结规则后逐日留痕的前向模拟或实盘业绩。当前不能据回测认定可复制执行。</p></div></div></div>
 </section>
 
 <section class="section" id="method">
@@ -153,19 +215,19 @@ page = '''<!doctype html>
 <div class="table-top"><h3>五档完整绩效</h3><div class="tabs" role="group" aria-label="选择绩效期间"><button class="active" aria-pressed="true" data-period="TEST">2024—2025 历史留出</button><button aria-pressed="false" data-period="TRAIN">2015—2023 样本内</button></div></div>
 <div class="table-wrap"><table id="performance-table"><caption class="sr-only">五档组合与中证1000绩效：2024—2025历史留出</caption><thead><tr><th scope="col">过滤后总市值名次</th><th scope="col">年化收益</th><th scope="col">夏普</th><th scope="col">日度最大回撤</th></tr></thead><tbody id="TEST">@@TEST@@</tbody><tbody id="TRAIN" hidden>@@TRAIN@@</tbody></table></div>
 <p class="note">留出期夏普最高的是401—500名。总体小市值梯度不等于“市值越小，在所有时期和所有指标下都越好”。窄屏可横向滚动表格。</p>
-<details class="detail-block"><summary>查看扩展至1000名的结果及已完成实验</summary><div class="detail-content"><figure><img loading="lazy" src="assets/extended_bands.png" alt="十档市值区间年化收益及夏普：样本内总体随市值增大而降低，留出期并非严格单调"><figcaption>501—1000名是事后扩展，未参与原五档选优。</figcaption></figure><p class="note">已完成：10/30/50bp成本、三种ST规则、退市残值情景、同样本行业／流动性／动量／亏损控制、年度及收益集中度、市场环境分析、整手与最低佣金。完整定义和数值见报告及Notebook。</p></div></details>
+<details class="detail-block"><summary>查看扩展至1000名的结果及已完成实验</summary><div class="detail-content"><figure><img loading="lazy" src="assets/extended_bands.png" alt="十档市值区间年化收益及夏普：样本内总体随市值增大而降低，留出期并非严格单调"><figcaption>501—1000名是事后扩展，未参与原五档选优。</figcaption></figure><p class="note">已完成：10/30/50bp成本、三种ST规则、退市残值情景、同样本行业／流动性／动量／亏损控制、年度及收益集中度、市场环境分析、整手与最低佣金、日频容量与额外冲击压力测试。完整定义和数值见报告及Notebook。</p></div></details>
 <div class="data-boundary" id="limits"><h3>证据边界</h3><p>早期停牌市值含估计补全；财报历史版本未全部认证；退市残值属于情景假设。控制变量后的剩余收益、亏损或ST身份，均不能单独证明壳价值或因果关系。公开Notebook支持结果复算，完整历史回测仍需授权输入。</p></div>
 </section>
 
 <section class="section roadmap" id="next">
-<div class="section-heading"><div><p class="eyebrow">04 / 下一步研究</p><h2>优先补足“能否成交”，再积累新证据</h2></div><a class="textlink" href="@@REPO@@/blob/main/RESEARCH_ROADMAP.md">查看实验方案 ↗</a></div>
-<div class="roadmap-grid"><article><span class="step">P1 / 成交容量</span><h3>订单会不会太大？</h3><p>按历史成交额衡量参与率，加入成交上限、延迟与冲击情景，画出资金规模—完成率—净收益关系。</p><small>最直接补足实盘可行性的缺口。</small></article><article><span class="step">P2 / 账户账本</span><h3>现金和股数能否逐笔对上？</h3><p>用未复权整数股数记录交易、公司行动、现金分红和实际费率，核对当前复权份额近似的误差。</p><small>从执行敏感性走向账户级验证。</small></article><article><span class="step">并行启动 / 前向模拟</span><h3>固定规则后还能延续吗？</h3><p>从新的冻结日期起，逐日保存候选、订单、未成交原因和模拟净值，按预先约定周期评价。</p><small>以上为后续计划，尚未完成这些验证。</small></article></div>
+<div class="section-heading"><div><p class="eyebrow">04 / 下一步研究</p><h2>把压力情景，进一步对照真实执行证据</h2></div><a class="textlink" href="@@REPO@@/blob/main/RESEARCH_ROADMAP.md">查看实验方案 ↗</a></div>
+<div class="roadmap-grid"><article><span class="step">P1 / 更细成交数据</span><h3>日频额度能转成实际成交吗？</h3><p>日频容量与冲击测试已完成。下一步用分钟或集合竞价数据验证成交窗口、排队和价差，并以真实成交记录校准冲击参数。</p><small>低日参与率不能证明开盘一定能成交。</small></article><article><span class="step">P2 / 账户账本</span><h3>现金和股数能否逐笔对上？</h3><p>用未复权整数股数记录交易、公司行动、现金分红和实际费率，核对当前复权份额近似的误差。</p><small>从执行敏感性走向账户级验证。</small></article><article><span class="step">并行启动 / 前向模拟</span><h3>固定规则后还能延续吗？</h3><p>从新的冻结日期起，逐日保存候选、订单、未成交原因和模拟净值，按预先约定周期评价。</p><small>更细成交验证、账户账本与前向模拟尚未完成。</small></article></div>
 <p class="note">此外，可补全收益口径基准和组合层面的因子归因；现有横截面控制回归不能替代它们。当前无需继续堆叠排名分组。</p>
 </section>
 
 <section class="section readmore" id="read">
 <div><p class="eyebrow">05 / 报告与复现</p><h2>每个结论，都能追溯到结果表</h2><p>先读报告把握研究逻辑，再用Notebook复算选优、绩效与HAC区间，最后检查执行引擎和数据契约。</p><p class="note">无需API可复算公开结果；从原始行情重跑需要另行准备已授权数据，缺失输入会被检查拦截。</p></div>
-<div class="resources"><a href="research_report.pdf"><div><strong>完整研究报告</strong><span>PDF · 14页 · 研究细节与反面证据</span></div><b aria-hidden="true">↗</b></a><a href="research_report.docx" download><div><strong>Word报告</strong><span>下载研究正文及完整图表</span></div><b aria-hidden="true">↓</b></a><a href="@@REPO@@/blob/main/research.ipynb"><div><strong>Notebook与结果复算</strong><span>从公开表重算核心指标</span></div><b aria-hidden="true">↗</b></a><a href="@@REPO@@"><div><strong>Python源码与测试</strong><span>执行引擎、数据契约及运行说明</span></div><b aria-hidden="true">↗</b></a></div>
+<div class="resources"><a href="research_report.pdf"><div><strong>完整研究报告</strong><span>PDF · 研究细节、容量情景与反面证据</span></div><b aria-hidden="true">↗</b></a><a href="research_report.docx" download><div><strong>Word报告</strong><span>下载研究正文及完整图表</span></div><b aria-hidden="true">↓</b></a><a href="@@REPO@@/blob/main/research.ipynb"><div><strong>Notebook与结果复算</strong><span>从公开表重算核心指标</span></div><b aria-hidden="true">↗</b></a><a href="@@REPO@@"><div><strong>Python源码与测试</strong><span>执行引擎、数据契约及运行说明</span></div><b aria-hidden="true">↗</b></a></div>
 </section>
 </main>
 <footer><a class="brand" href="#">Elysiaivy <span>/ Research</span></a><span>个人量化研究项目 · 数据截至2025年末<br>页面更新 2026.10 · 非实盘业绩</span></footer>

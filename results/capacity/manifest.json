@@ -1,0 +1,36 @@
+{
+  "run_id": "e247a5fcac10ad8b03be27b825421817203d402c119c94d2d7584db06d32219e",
+  "started_at_utc": "2026-10-25T04:10:01.607992+00:00",
+  "completed_at_utc": "2026-10-25T04:21:42.946975+00:00",
+  "full_predeclared_grid": true,
+  "n_scenarios": 128,
+  "inputs": {
+    "config.json": "5267e63bf272e8f09397ce3b774c5b36ff2561e7172a200d3b90aff29377bbeb",
+    "results/selection.json": "bc8868bdc686d06ddf1832c4418d6be048ad40d67939834a61cec5dac5c04f5d",
+    "results/capacity/protocol.json": "bda51af7e6541b6b93d0a2c7841f0ae06a377a01e58f1b92df5fd369133e7dde",
+    "external_full_project/data/prepared/daily_market.npz": "cf0f78043659702ebe9f7badb0bf74ce50051849691b99cd2dba2b59f1d90d7e",
+    "external_full_project/data/prepared/panel.csv": "94966b9462727c159c6db1093b2000911ec287a949aae34105eeb47118e5b0f3",
+    "external_full_project/data/prepared/selection_universe.csv": "eefbaf4776c0290b0ffa86e51e6b764d9b84e6b886511879d65ee2f1fdd210d5",
+    "external_full_project/data/capacity/capacity_market.npz": "d1a346528e34f11dd5874e6db3f06d5f2751fe8f42792266bf79ac5c4e36b4f5",
+    "external_full_project/data/capacity/input_manifest.json": "94b96f189f3a54f54976dbfd011df923dc7d9012806346843ab1955eef3ecf38",
+    "external_full_project/data/capacity/coverage.json": "bd73753d1b1f2440ac311b8a5d691e6b4ea57bcc30cba566c1ec0b43e478fbaa",
+    "microcap/execution.py": "c3b318792210f303bb9701c189cc86ae9453732d99262023d4edd6761efd7fd9",
+    "microcap/liquidity.py": "5d3cf13035aa27cdfe22a028ecb7c921a2510632493b4ba0dad8e4f67b872703",
+    "microcap/execution_constraints.py": "de1730b286b9fc2f99a4124827216a9542b93529d929ce1dd2215784b792ceec",
+    "microcap/capacity_data.py": "a4ac4dc8f7a0a9a9ebb3b27cc8ad47b659925c0ccadf9c652c54208a21c4ba11",
+    "scripts/run_capacity_stress.py": "2969428f4b4d50ff70b485d1ccd1c92afabbbb4f0cbcdc0bd5cf0efca8471de1",
+    "scripts/capacity_ledger_checks.py": "3b731d37a5f40080e6a468fb469ae4919ee56ece23cfee71907a9da36d0dd619"
+  },
+  "outputs": {
+    "performance.csv": "911a14f30323dfa42800dea933560ce9994c253970354374948ff327403b6a0a",
+    "performance_differences.csv": "0bd85beb9ff709c5b26f8498b98355b69a929a65fb62c8bd6871c2f0614b6f12",
+    "ledger_checks.csv": "81b0cfdd4dd5dbcec52edc487a3eb2b53984548df72ded50aa52bd7081140fd0",
+    "largest_order_burdens.csv": "7358199afad10caaedea714bdfede1ad3138ddabedee4aaf8bae43a047e20659",
+    "attempt_summary.csv": "219331729c9255e5bb9faf114627b8ca0c1c85e54b740d6bc5b58dc155f30843",
+    "coverage.json": "bd73753d1b1f2440ac311b8a5d691e6b4ea57bcc30cba566c1ec0b43e478fbaa",
+    "constraint_summary.csv": "98494f1942500210a8d80b9ef9f7c03d4106ce7596b65356f2755c4d04c5e9a6",
+    "daily.csv.gz": "5175c01b04735bef0517eca154108528440988d6847c0acf394057e38384d517",
+    "monthly.csv": "e866119940be0bce4c6951eada644d40ce72b65f5ae827ac42e7856a914f97c3"
+  },
+  "scope": "Historical daily execution pressure scenarios; raw inputs/full ledgers are not public; no live fill certification."
+}

@@ -1,0 +1,114 @@
+{
+  "study": "fixed_winner_daily_capacity_impact_stress",
+  "protocol_version": 2,
+  "frozen_before_scenario_evaluation": true,
+  "winner": "R001_100",
+  "capitals_yuan": [
+    100000,
+    300000,
+    1000000,
+    2000000,
+    5000000,
+    10000000,
+    30000000,
+    50000000
+  ],
+  "periods": {
+    "TRAIN": [
+      "2015-01",
+      "2023-12"
+    ],
+    "TEST": [
+      "2024-01",
+      "2025-12"
+    ]
+  },
+  "capital_reset": "Each period starts from cash; no subsequent capital flows. Report maximum realized NAV because capital compounds.",
+  "base_cost_bps": 30,
+  "commission_bps": 2.5,
+  "minimum_commission_yuan": 5,
+  "buy_lot_shares": 100,
+  "scenarios": {
+    "OPEN_BASE": {
+      "execution": "original_next_open",
+      "participation": null,
+      "impact_eta": 0
+    },
+    "VWAP_BASE": {
+      "execution": "daily_vwap_proxy",
+      "participation": null,
+      "impact_eta": 0
+    },
+    "CAP_1P": {
+      "execution": "daily_vwap_proxy",
+      "participation": 0.01,
+      "impact_eta": 0
+    },
+    "CAP_1P_SIGMA": {
+      "execution": "daily_vwap_proxy",
+      "participation": 0.01,
+      "impact_eta": 0,
+      "require_known_sigma": true
+    },
+    "MAIN_1P": {
+      "execution": "daily_vwap_proxy",
+      "participation": 0.01,
+      "impact_eta": 0.5
+    },
+    "TIGHT_0P5": {
+      "execution": "daily_vwap_proxy",
+      "participation": 0.005,
+      "impact_eta": 0.5
+    },
+    "LOOSE_5P": {
+      "execution": "daily_vwap_proxy",
+      "participation": 0.05,
+      "impact_eta": 0.5
+    },
+    "IMPACT_HIGH_1P": {
+      "execution": "daily_vwap_proxy",
+      "participation": 0.01,
+      "impact_eta": 1.0
+    }
+  },
+  "liquidity_inputs": {
+    "adv20": "Mean daily turnover in CNY over previous 20 market sessions, minimum 20 known observations, shifted one session.",
+    "sigma20": "Sample standard deviation of adjusted daily simple returns over previous 20 market sessions, minimum 20 known observations, shifted one session.",
+    "zero_turnover": "Only evidenced full-session suspension may map missing daily amount to zero; other unknown inputs remain missing.",
+    "zero_or_unknown_adv": "No constrained fill; retry later and report reason.",
+    "vwap": "daily amount (thousand CNY) * 1000 / (daily vol in lots * 100), checked against unadjusted low and high"
+  },
+  "capacity_formula": "For each stock/date share one buy-plus-sell monetary budget min(participation * lag_ADV20, participation * realized_daily_amount); realized day amount affects fills only, not selection or pre-close intent.",
+  "incremental_impact": "Extra cash cost C(Q)=eta * lag_sigma20 * Q * sqrt(Q / lag_ADV20), using cumulative same-stock/date notional; charge only C(Q_after)-C(Q_before). No simultaneous price adjustment.",
+  "impact_interpretation": "Uncalibrated additional liquidity deterioration above the original 30bp and minimum commission, not an estimate of true total transaction cost. Coefficients are fixed sensitivity assumptions.",
+  "budget": "Prior-close cash only; plan at known upper limit with worst-case impact allowance, integer buy lots. Current sale proceeds cannot fund current purchases.",
+  "partial_fills": "Carry ordinary target deficits and risk exit residuals; maintain one replacement slot per risk event, including later sale receipts and partially filled replacement orders. Month-end retargeting is explicitly recorded.",
+  "completion_metric": "Daily order-attempt amount completion: sum(filled_units * prior_close_mark) / sum(planned_units * prior_close_mark). Retries re-enter denominator. Not unique parent-order completion.",
+  "report_metrics": [
+    "CAGR",
+    "monthly Sharpe rf0",
+    "daily maximum drawdown",
+    "mean cash",
+    "maximum realized NAV",
+    "daily attempt amount completion",
+    "capacity-limited attempt count",
+    "impact cash cost",
+    "month-end target shortfall",
+    "risk exit delay",
+    "unresolved liquidity coverage"
+  ],
+  "limits": [
+    "Daily aggregate fills at whole-day VWAP are a separate execution scenario, not certification of opening-auction or intraday fillability.",
+    "No queue, spread, minute path, endogenous volume response, or empirically fitted impact coefficient.",
+    "Daily suspension and eligibility filters are conservative and can differ from original opening-only eligibility.",
+    "Adjusted units and synthetic distribution reinvestment retain the original wealth-accounting limitations.",
+    "2024-2025 is already inspected historical holdout; scenarios do not create a new independent validation sample.",
+    "No threshold is selected after viewing outcomes; there is no guaranteed capacity recommendation."
+  ],
+  "references": [
+    "https://tushare.pro/document/2?doc_id=27",
+    "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.1.021006",
+    "https://www.aqr.com/insights/research/working-paper/trading-costs-of-asset-pricing-anomalies"
+  ],
+  "matched_volatility_control": "CAP_1P_SIGMA has zero extra impact but the same known-sigma requirement as MAIN_1P; separates input coverage from extra impact and path effects. Added after input coverage audit, before scenario outcomes."
+}
