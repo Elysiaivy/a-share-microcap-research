@@ -25,6 +25,7 @@ Windows激活命令：`.venv\Scripts\activate`。使用Python 3.13，主要依�
 python scripts/analyze_applicability.py
 python scripts/build_word_figures.py
 python scripts/build_word_report.py
+python scripts/build_site_figures.py
 python scripts/build_site.py
 ```
 
@@ -38,7 +39,9 @@ PDF导出需要LibreOffice，可使用：
 soffice --headless --convert-to pdf --outdir docs docs/research_report.docx
 ```
 
-转换后必须检查分页、中文字体和图表。仓库已包含校验后的PDF，普通阅读和统计复算不需要安装办公软件。`build_site.py`读取结果表生成网页表格并复制所需图表，不重跑策略。
+转换后必须检查分页、中文字体和图表。仓库已包含校验后的PDF，普通阅读和统计复算不需要安装办公软件。`build_site_figures.py`从冻结的日度净值绘制网页收益／回撤概览；`build_site.py`读取结果表生成网页表格并复制所需图表，均不重跑策略。
+
+仅更新展示时，运行后两个入口即可，无需重建报告或重新计算研究结果。网站使用静态HTML/CSS/JS，可在仓库根目录用`python -m http.server 8873 --directory docs`预览；关闭服务器后仍可通过GitHub Pages访问已发布版本。后续未完成实验单列在`RESEARCH_ROADMAP.md`，不混入已完成的绩效。
 
 ## 3 完整交易回测需要额外数据
 
